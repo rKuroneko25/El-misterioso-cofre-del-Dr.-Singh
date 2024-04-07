@@ -995,19 +995,19 @@ MonoBehaviour:
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
-    textSpeed: 0
+    textSpeed: 0.01
   - speakerName: Adam
     speakerTexture: {fileID: 0}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
-    textSpeed: 0.1
+    textSpeed: 0.01
   - speakerName: Amelia
     speakerTexture: {fileID: 0}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
-    textSpeed: 0.2
+    textSpeed: 0.01
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

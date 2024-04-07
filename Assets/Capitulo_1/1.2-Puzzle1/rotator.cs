@@ -35,7 +35,16 @@ public class NewBehaviourScript : MonoBehaviour
             float y = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
             transform.Rotate(Vector3.down, x);
-            transform.Rotate(Vector3.right, y);
+            
+            float currentXRotation = transform.eulerAngles.x;
+            float newXRotation = currentXRotation + y;
+            if (newXRotation < 15 || newXRotation > 345) // Si la rotación excede los 15 grados hacia arriba o hacia abajo
+            {
+                transform.Rotate(Vector3.right, y);
+            }
+
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+
         }
     }
 
