@@ -844,11 +844,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0685ed02-02e5-4b4b-ba71-ef39b9776101
+  cloudProjectId: 0bfca540-25ec-44c6-a026-f88a468f1f92
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Cofre Singh
-  organizationId: unity_ff72f6952d00c65d51f0
+  projectName: Proyecto Final DSH
+  organizationId: unity_9c13f76278f2ca1fa277
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
