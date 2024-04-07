@@ -991,19 +991,22 @@ MonoBehaviour:
   textComponent: {fileID: 39628830}
   dialogueLines:
   - speakerName: Adam
-    speakerTexture: {fileID: 0}
+    LCharTexture: {fileID: 0}
+    RCharTexture: {fileID: 0}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
     textSpeed: 0
   - speakerName: Adam
-    speakerTexture: {fileID: 0}
+    LCharTexture: {fileID: 0}
+    RCharTexture: {fileID: 0}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
     textSpeed: 0.1
   - speakerName: Amelia
-    speakerTexture: {fileID: 0}
+    LCharTexture: {fileID: 0}
+    RCharTexture: {fileID: 0}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
