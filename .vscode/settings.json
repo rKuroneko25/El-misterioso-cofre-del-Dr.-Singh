@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Project Singh.sln"
+    "dotnet.defaultSolution": "El-misterioso-cofre-del-Dr.-Singh.sln"
 }
