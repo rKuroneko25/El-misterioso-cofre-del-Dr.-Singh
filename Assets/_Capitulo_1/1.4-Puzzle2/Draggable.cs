@@ -26,6 +26,10 @@ public class Draggable : MonoBehaviour
             Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(transform.position).z));
             transform.position = objectDragStartPosition + (currentMousePosition - mouseDragStartPosition);
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z + 90f);
+        }
     }
 
     private void OnMouseUp()
