@@ -14,7 +14,8 @@ public class Dialogue1_1 : MonoBehaviour
     public class DialogueLine
     {
         public string speakerName;
-        public Texture speakerTexture;
+        public Texture LCharTexture;
+        public Texture RCharTexture;
         [TextArea(3, 20)]
         public string dialogueText;
         public float textSpeed;
