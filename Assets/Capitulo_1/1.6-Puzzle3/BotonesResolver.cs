@@ -12,7 +12,8 @@ public class BotonesResolver : MonoBehaviour
     private class  Boton{
         public GameObject boton;
         public bool activo;}
-    private static  Boton[] botones = new Boton[2];
+    private static  List<Boton> botones = new List<Boton>();
+
     private static Dictionary<string, int> parrafos= new Dictionary<string, int>{
         {"Kaufurkunde", 1},
         {"Morgege", 2},
@@ -36,12 +37,12 @@ public class BotonesResolver : MonoBehaviour
     
     void activaBoton(string nombre, GameObject boton, bool Manual_Contrato){
         //cambia la opacidad de la imagen del boton
-        if(parrafosOcultos == 0 || botones.Length==2){
+        if(parrafosOcultos == 0 || botones.Count==2){
             return;
         }
         // buscar si hay un true en el diccionario y ponerlo en false
         if(Manual_Contrato){ //true es que es del manual
-            if(botones.Length==1){
+            if(botones.Count==1){
                 if(botones[0].boton.tag == boton.tag && 
                 botones[0].boton!= boton){ // se tiene que desvelar el parrafo
                     botones[1]= new Boton{boton=boton, activo=true};
@@ -50,7 +51,7 @@ public class BotonesResolver : MonoBehaviour
                     foreach(Boton b in botones){
                         b.boton.SetActive(false);
                     }
-                    botones= new Boton[2];
+                    botones= new List<Boton>();
 
                     //llamada a reverlar parrafo
                     Debug.Log("Parrafo "+parrafos[nombre]+" Resuelto");
@@ -59,13 +60,12 @@ public class BotonesResolver : MonoBehaviour
                     if(parrafosOcultos == 0){
                         Debug.Log("Puzzle Resuelto");
                     }
-                    
 
                 }
                 else{
                     //hay que desactivar el boton anterior        
                     botones[0].boton.GetComponent<Image>().color = new Color(0,0,0,0);
-                    botones= new Boton[2];
+                    botones= new List<Boton>();
                 }
             }
             else{
@@ -80,7 +80,7 @@ public class BotonesResolver : MonoBehaviour
 ///funcion para boton de mostrar parrafo
 public void mostrarParrafo(int parrafo){
    
-    if(botones.Length == 2 && parrafosOcultos>0){
+    if(botones.Count == 2 && parrafosOcultos>0){
         //llamar a la funcion que muestra el parrafo
         
     
