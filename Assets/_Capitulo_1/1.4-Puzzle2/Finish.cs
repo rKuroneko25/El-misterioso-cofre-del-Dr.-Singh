@@ -8,7 +8,6 @@ public class Finish : MonoBehaviour
     public List<GameObject> squares; // Lista de los 12 cuadrados
     private List<Vector3> correctPositions = new List<Vector3>();
 
-    
 
     // Start is called before the first frame update
     void Start()
@@ -31,21 +30,29 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    
+    public void Comprobar()
+    {
+        Debug.Log("Este es un mensaje de registro");
+        bool allSquaresInCorrectPosition = true; // Asumimos que todos los cuadrados están en la posición correcta
+
         for (int i = 0; i < squares.Count; i++)
         {
-            // Si la posición del cuadrado no es igual a la posición correcta, salimos de la función Update
-            if (Vector3.Distance(squares[i].transform.position, correctPositions[i]) > 8.96f)
+            // Si la posición del cuadrado no está a menos de 1 unidad de la posición correcta, establecemos allSquaresInCorrectPosition en false y salimos del bucle
+            if (Vector3.Distance(squares[i].transform.position, correctPositions[i]) > 9f)
             {
-                return;
+                allSquaresInCorrectPosition = false;
+                break;
             }
         }
 
-        // Modificar para que Resolver haga la comprobacion
-        NextPhase();
+        // Si todos los cuadrados están en la posición correcta, llamamos a NextPhase
+        if (allSquaresInCorrectPosition)
+        {
+            SceneManager.LoadScene("Puzzle1");
+        }
     }
 
-    void NextPhase()
-    {
-        SceneManager.LoadScene("Puzzle1");
-    }
 }
