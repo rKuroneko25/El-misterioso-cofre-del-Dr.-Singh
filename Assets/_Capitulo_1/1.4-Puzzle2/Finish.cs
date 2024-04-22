@@ -35,7 +35,6 @@ public class Finish : MonoBehaviour
     
     public void Comprobar()
     {
-        Debug.Log("Este es un mensaje de registro");
         bool allSquaresInCorrectPosition = true; // Asumimos que todos los cuadrados están en la posición correcta
 
         for (int i = 0; i < squares.Count; i++)
