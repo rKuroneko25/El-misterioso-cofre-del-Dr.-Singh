@@ -25,6 +25,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -73,6 +74,7 @@ crashlytics-build.properties
 
 #vscode files
 .vscode/
-
-
+.vscode/launch.json
 .vscode/settings.json
+
+.gitignore
