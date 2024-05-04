@@ -8,6 +8,11 @@ TagManager:
   - Kaufer
   - Vorbehalt
   - Kundigung
+  - ContratoEs
+  - Parrafo1
+  - Parrafo2
+  - Parrafo3
+  - Parrafo4
   layers:
   - Default
   - TransparentFX

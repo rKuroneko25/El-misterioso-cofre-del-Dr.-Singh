@@ -15,10 +15,10 @@ public class ActualizaBotones : MonoBehaviour
         book.OnFlip.AddListener(ActualizarBotones);
         //pon todos los botones en falso
         foreach(Button boton in botones_1Pagina){
-            boton.interactable = false;
+            boton.gameObject.SetActive(false);
         }
         foreach(Button boton in botones_2Pagina){
-            boton.interactable = false;
+            boton.gameObject.SetActive(false);
         }
     }
 
@@ -28,18 +28,18 @@ public class ActualizaBotones : MonoBehaviour
     public void ActualizarBotones(){
         if(book.currentPage == 2){
             foreach(Button boton in botones_1Pagina){
-                boton.interactable = true;
+                boton.gameObject.SetActive(true);
             }
             foreach(Button boton in botones_2Pagina){
-                boton.interactable = false;
+                boton.gameObject.SetActive(false);
             }
         }
         if(book.currentPage == 4){
             foreach(Button boton in botones_1Pagina){
-                boton.interactable = false;
+                boton.gameObject.SetActive(false);
             }
             foreach(Button boton in botones_2Pagina){
-                boton.interactable = true;
+                boton.gameObject.SetActive(true);
             }
         }
     }
