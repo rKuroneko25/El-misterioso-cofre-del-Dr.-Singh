@@ -16,6 +16,9 @@ public class BotonesResolver : MonoBehaviour
         public bool Manual_Contrato;}
 
     private static Boton BotonAnterior= null;
+    public Button[] botonesCiudades;
+    public GameObject[] parrafosContrato;
+    public GameObject ContratoEspanol;
     private static Dictionary<string, string> parrafos= new Dictionary<string, string>{
         {"Morgege", "1"},
         {"Vorbehalt", "2"},  
@@ -61,13 +64,13 @@ public class BotonesResolver : MonoBehaviour
 
                 //llamada a revelar parrafo
                 Debug.Log("Revelar Parrafo"+parrafos[nombre]);
-                GameObject.FindGameObjectWithTag("Parrafo"+ parrafos[nombre]).GetComponent<MeshRenderer>().enabled = true;
+                parrafosContrato[Int32.Parse(parrafos[nombre])-1].SetActive(true);
 
               
                 parrafosOcultos--;
                 if(parrafosOcultos == 0){
                     Debug.Log("Puzzle Resuelto");
-                    GameObject.FindGameObjectWithTag("ContratoEs").GetComponent<MeshRenderer>().enabled = true;
+                    ContratoEspanol.gameObject.SetActive(true);
                 }
 
             }
