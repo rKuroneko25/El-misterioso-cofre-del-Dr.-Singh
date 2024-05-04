@@ -186,8 +186,8 @@ MonoBehaviour:
 
     C'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 1027982673}
   - component: {fileID: 1027982672}
   - component: {fileID: 1027982671}
+  - component: {fileID: 1027982677}
   m_Layer: 0
   m_Name: Amelia
   m_TagString: Untagged
@@ -591,13 +592,34 @@ Transform:
   m_GameObject: {fileID: 1027982670}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 2.94, z: -0.06815773}
+  m_LocalPosition: {x: -6.55, y: 2.94, z: -0.06815773}
   m_LocalScale: {x: -6.5, y: 6.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1872327425}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1027982677
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027982670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca36e762b847bc14fb5f1cd00fded3f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1120333640
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +636,7 @@ GameObject:
   - component: {fileID: 1120333641}
   - component: {fileID: 1120333647}
   m_Layer: 0
-  m_Name: Dr. Singh
+  m_Name: Singh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1006,8 +1028,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1031,8 +1053,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1472,7 +1494,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46ad1f8b960b0454f97075f2f77d68c6, type: 2}
+  - {fileID: 2100000, guid: 6f25824f87aa57b4592aa301259816e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1551,6 +1573,7 @@ GameObject:
   - component: {fileID: 2074247290}
   - component: {fileID: 2074247289}
   - component: {fileID: 2074247291}
+  - component: {fileID: 2074247292}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1636,20 +1659,27 @@ MonoBehaviour:
     activo: R
     speakerAudio: {fileID: 8300000, guid: a775b99d368841e488cb492bfabdee95, type: 3}
     LCharacterImage: {fileID: 1027982670}
-    LCharacterMaterial: {fileID: 2100000, guid: 4663454e5507df24e9512c3140f435bb, type: 2}
+    LCharacterMaterial: {fileID: 2100000, guid: 0e1b84b96382f8c43a252bb1d8a0f211, type: 2}
     RCharacterImage: {fileID: 1120333640}
     RCharacterMaterial: {fileID: 2100000, guid: 6649323be9a3a2f49b7c63ff6385a0cd, type: 2}
+    Salen: []
+    Entran:
+    - {fileID: 1120333640}
+    - {fileID: 1027982670}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
     textSpeed: 0.01
   - speakerName: Dr. Singh
-    activo: L
+    activo: R
     speakerAudio: {fileID: 8300000, guid: a775b99d368841e488cb492bfabdee95, type: 3}
-    LCharacterImage: {fileID: 1120333640}
-    LCharacterMaterial: {fileID: 2100000, guid: 3f0e43cd41fadb242a43f0929f2760b6, type: 2}
-    RCharacterImage: {fileID: 1027982670}
-    RCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 0e1b84b96382f8c43a252bb1d8a0f211, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: 8228d73c9f061de47b21cf88728c2dea, type: 2}
+    Salen:
+    - {fileID: 1027982670}
+    Entran: []
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
@@ -1660,11 +1690,63 @@ MonoBehaviour:
     LCharacterImage: {fileID: 1027982670}
     LCharacterMaterial: {fileID: 2100000, guid: aef4d0ce2f152a147be0d3c970218b0e, type: 2}
     RCharacterImage: {fileID: 1120333640}
-    RCharacterMaterial: {fileID: 2100000, guid: 167440d7fc986bf49a617a57109f7947, type: 2}
+    RCharacterMaterial: {fileID: 2100000, guid: d83ff499c906c4643af5a8c672cf71cc, type: 2}
+    Salen: []
+    Entran:
+    - {fileID: 1027982670}
     dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
       eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
       mi a ornare porttitor. Duis ac.
     textSpeed: 0.01
+  - speakerName: Amelia
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: a775b99d368841e488cb492bfabdee95, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: aef4d0ce2f152a147be0d3c970218b0e, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: fbc836d54ff60d244a475a6765d39177, type: 2}
+    Salen:
+    - {fileID: 1120333640}
+    Entran: []
+    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
+      mi a ornare porttitor. Duis ac.
+    textSpeed: 0.01
+  - speakerName: Dr. Singh
+    activo: R
+    speakerAudio: {fileID: 8300000, guid: a775b99d368841e488cb492bfabdee95, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 297a1fb4f40153d49b8d21962e23639f, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: 6649323be9a3a2f49b7c63ff6385a0cd, type: 2}
+    Salen: []
+    Entran:
+    - {fileID: 1120333640}
+    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
+      mi a ornare porttitor. Duis ac.
+    textSpeed: 0.01
+--- !u!95 &2074247292
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074247287}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59a910481d0c6a04baf96a700f090b1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
