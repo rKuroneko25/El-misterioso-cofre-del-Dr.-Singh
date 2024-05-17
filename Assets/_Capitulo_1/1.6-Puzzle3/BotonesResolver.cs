@@ -7,22 +7,20 @@ using UnityEngine.UI;
 
 public class BotonesResolver : MonoBehaviour
 {
+
     private static int parrafosOcultos = 4;
     //par de boton y si esta activo o no
     private class  Boton{
         public GameObject boton;
-        public bool activo;}
-    private static  List<Boton> botones = new List<Boton>();
+        public string tag;
+        public bool Manual_Contrato;}
 
-    private static Dictionary<string, int> parrafos= new Dictionary<string, int>{
-        {"Kaufurkunde", 1},
-        {"Morgege", 2},
-        {"Vorbehalt", 3},
-        {"Kaupfreis", 4},
-        {"Grezen", 5},
-        {"Kundigung", 6},
-        {"Kaufer", 7},
-        {"Verkaufer", 8}
+    private static Boton BotonAnterior= null;
+    private static Dictionary<string, string> parrafos= new Dictionary<string, string>{
+        {"Morgege", "1"},
+        {"Vorbehalt", "2"},  
+        {"Kaufer", "3"},          
+        {"Kundigung", "4"},
     };
 
     // Start is called before the first frame update
@@ -37,62 +35,73 @@ public class BotonesResolver : MonoBehaviour
     
     void activaBoton(string nombre, GameObject boton, bool Manual_Contrato){
         //cambia la opacidad de la imagen del boton
-        if(parrafosOcultos == 0 || botones.Count==2){
+        if(parrafosOcultos == 0 ){
             return;
         }
         // buscar si hay un true en el diccionario y ponerlo en false
-        if(Manual_Contrato){ //true es que es del manual
-            if(botones.Count==1){
-                if(botones[0].boton.tag == boton.tag && 
-                botones[0].boton!= boton){ // se tiene que desvelar el parrafo
-                    botones[1]= new Boton{boton=boton, activo=true};
-                    boton.GetComponent<Image>().color = new Color(109,109,109,90);
-                    
-                    foreach(Boton b in botones){
-                        b.boton.SetActive(false);
-                    }
-                    botones= new List<Boton>();
+        
+        if(BotonAnterior != null){
+            if(BotonAnterior.tag == nombre && BotonAnterior.boton!= boton 
+            && Manual_Contrato != BotonAnterior.Manual_Contrato){ // se tiene que desvelar el parrafo
+                
+                
+                
+                
 
-                    //llamada a reverlar parrafo
-                    Debug.Log("Parrafo "+parrafos[nombre]+" Resuelto");
-                    parrafosOcultos--;
-
-                    if(parrafosOcultos == 0){
-                        Debug.Log("Puzzle Resuelto");
-                    }
-
+                Color color =BotonAnterior.boton.GetComponent<Image>().color ;
+                color.a= 0;
+                BotonAnterior.boton.GetComponent<Image>().color = color;
+                GameObject[] BotonesDesactivar= GameObject.FindGameObjectsWithTag(nombre);
+                foreach(GameObject botonDesactivar in BotonesDesactivar){
+                    Button bot= botonDesactivar.GetComponent<Button>();
+                    bot.interactable= false;
                 }
-                else{
-                    //hay que desactivar el boton anterior        
-                    botones[0].boton.GetComponent<Image>().color = new Color(0,0,0,0);
-                    botones= new List<Boton>();
+                
+                BotonAnterior= null;
+
+                //llamada a revelar parrafo
+                Debug.Log("Revelar Parrafo"+parrafos[nombre]);
+                GameObject.FindGameObjectWithTag("Parrafo"+ parrafos[nombre]).GetComponent<MeshRenderer>().enabled = true;
+
+              
+                parrafosOcultos--;
+                if(parrafosOcultos == 0){
+                    Debug.Log("Puzzle Resuelto");
+                    GameObject.FindGameObjectWithTag("ContratoEs").GetComponent<MeshRenderer>().enabled = true;
                 }
+
             }
             else{
-                boton.GetComponent<Image>().color = new Color(109,109,109,90);
-                botones[0]= new Boton{boton=boton, activo=true};
+                //hay que desactivar el boton anterior        
+                Color color =BotonAnterior.boton.GetComponent<Image>().color ;
+                color.a= 0;
+                BotonAnterior.boton.GetComponent<Image>().color = color;
+                BotonAnterior= null;
+                Debug.Log("Boton Anterior Desactivado");
             }
+        }
+        else{
+            Color color= boton.GetComponent<Image>().color;  //new Color(109,109,109,90);
+            color.a= 0.5f;
+            boton.GetComponent<Image>().color = color;
+            BotonAnterior=new Boton{boton=boton, tag=nombre, Manual_Contrato=Manual_Contrato};
+            Debug.Log("Boton "+BotonAnterior.tag+" Activado");
+        }
+        
             
-            
-    }
-}
-
-///funcion para boton de mostrar parrafo
-public void mostrarParrafo(int parrafo){
-   
-    if(botones.Count == 2 && parrafosOcultos>0){
-        //llamar a la funcion que muestra el parrafo
         
     
     }
-    
-}
+
+
 
 /////////////////////////Botones Manual//////////////////////////////////////////
 
     public void KaufurkundeM(){
         Debug.Log("Kaufurkunde Manual");
         activaBoton("Kaufurkunde", gameObject, true);
+        //imprime la lista de botones
+        
     }
 
     public void MorgegeM(){
