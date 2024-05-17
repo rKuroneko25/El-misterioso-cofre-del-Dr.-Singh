@@ -4552,6 +4552,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122399932}
   m_CullTransparentMesh: 1
+--- !u!1 &2129240338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129240340}
+  - component: {fileID: 2129240339}
+  m_Layer: 0
+  m_Name: AudioManager (SFX)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2129240339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129240338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: agua
+    clip: {fileID: 8300000, guid: 4318f46896b6ba44ba500aa7b9358acc, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - name: valvula
+    clip: {fileID: 8300000, guid: cbb5238446b9e7043afda11b7f6455d1, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - name: tuberia
+    clip: {fileID: 8300000, guid: 3ce57506788cc1943b6fcdcb7893d033, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+--- !u!4 &2129240340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129240338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.73544, y: 268.29904, z: -0.4941372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4564,3 +4624,4 @@ SceneRoots:
   - {fileID: 240590645}
   - {fileID: 702904746}
   - {fileID: 1805064331}
+  - {fileID: 2129240340}
