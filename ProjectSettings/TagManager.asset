@@ -16,6 +16,15 @@ TagManager:
   - ciudad
   - Tuberia
   - Manivela
+  - AR
+  - AB
+  - I
+  - D
+  - ARI
+  - ARD
+  - ABI
+  - ABD
+  - E
   layers:
   - Default
   - TransparentFX
