@@ -356,6 +356,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2074247288}
+  - {fileID: 2131701174}
+  - {fileID: 373349751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -363,6 +365,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &373349750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373349751}
+  - component: {fileID: 373349754}
+  - component: {fileID: 373349753}
+  m_Layer: 5
+  m_Name: OscuroEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &373349751
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373349750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299494225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.0007782}
+  m_SizeDelta: {x: 1920, y: 1080.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &373349753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373349750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &373349754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373349750}
+  m_CullTransparentMesh: 1
 --- !u!1 &1027982670
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+  m_IsActive: 0
   m_IsActive: 0
 --- !u!82 &1027982671
 AudioSource:
@@ -592,7 +670,7 @@ Transform:
   m_GameObject: {fileID: 1027982670}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.55, y: 2.94, z: -0.06815773}
+  m_LocalPosition: {x: -14.28, y: 2.94, z: -0.06815773}
   m_LocalScale: {x: -6.5, y: 6.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -798,7 +876,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120333640}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -810,7 +888,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8228d73c9f061de47b21cf88728c2dea, type: 2}
+  - {fileID: 2100000, guid: fe5ad718720d728488294f473e89eaf5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1216,7 +1294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1559213709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,7 +1344,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559213708}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1339,7 +1417,7 @@ Transform:
   m_GameObject: {fileID: 1559213708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.01}
+  m_LocalPosition: {x: 0, y: 0, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1758,74 +1836,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8973442d34f27c4aabab26b5cc8be33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EscenaSiguiente: Escena_2
+  oscurito: {fileID: 2131701173}
+  OscuroEnd: {fileID: 373349750}
   nameComponent: {fileID: 1543617364}
   textComponent: {fileID: 39628830}
   dialogueLines:
   - speakerName: Dr. Singh
-    activo: R
-    speakerAudio: {fileID: 0}
-    LCharacterImage: {fileID: 0}
-    LCharacterMaterial: {fileID: 0}
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: 840e512322368d2418fa7d8383463b0f, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
     RCharacterImage: {fileID: 1120333640}
-    RCharacterMaterial: {fileID: 2100000, guid: bc18a61674edff745aaa5236772f22ca, type: 2}
+    RCharacterMaterial: {fileID: 2100000, guid: fe5ad718720d728488294f473e89eaf5, type: 2}
     Salen: []
     Entran:
     - {fileID: 1120333640}
-    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
-      mi a ornare porttitor. Duis ac.
+    - {fileID: 1027982670}
+    dialogueText: "Doctora Smith, p\xE1seme el bistur\xED."
+    textSpeed: 0.01
+  - speakerName: Dra. Smith
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: b8eba31120cc3cb4aad04cf41dd6cf72, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: 3dfa9883d0e347b4f8643f3d14fd9eb4, type: 2}
+    Salen: []
+    Entran: []
+    dialogueText: Ten.
     textSpeed: 0.01
   - speakerName: Dr. Singh
-    activo: 
-    speakerAudio: {fileID: 0}
-    LCharacterImage: {fileID: 0}
-    LCharacterMaterial: {fileID: 0}
-    RCharacterImage: {fileID: 0}
-    RCharacterMaterial: {fileID: 0}
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: c009227d56d1f7e49933074eb761cd3e, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: fe5ad718720d728488294f473e89eaf5, type: 2}
     Salen: []
     Entran: []
-    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
-      mi a ornare porttitor. Duis ac.
+    dialogueText: Gracias. Prepare la aguja y el hilo, por favor.
     textSpeed: 0.01
-  - speakerName: Amelia
-    activo: 
-    speakerAudio: {fileID: 0}
-    LCharacterImage: {fileID: 0}
-    LCharacterMaterial: {fileID: 0}
-    RCharacterImage: {fileID: 0}
-    RCharacterMaterial: {fileID: 0}
+  - speakerName: Dra. Smith
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: f4965431ed458734593a64e6277f829c, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: 3dfa9883d0e347b4f8643f3d14fd9eb4, type: 2}
     Salen: []
     Entran: []
-    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
-      mi a ornare porttitor. Duis ac.
-    textSpeed: 0.01
-  - speakerName: Amelia
-    activo: 
-    speakerAudio: {fileID: 0}
-    LCharacterImage: {fileID: 0}
-    LCharacterMaterial: {fileID: 0}
-    RCharacterImage: {fileID: 0}
-    RCharacterMaterial: {fileID: 0}
-    Salen: []
-    Entran: []
-    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
-      mi a ornare porttitor. Duis ac.
+    dialogueText: "Aqu\xED tiene doctor."
     textSpeed: 0.01
   - speakerName: Dr. Singh
-    activo: 
-    speakerAudio: {fileID: 0}
-    LCharacterImage: {fileID: 0}
-    LCharacterMaterial: {fileID: 0}
-    RCharacterImage: {fileID: 0}
-    RCharacterMaterial: {fileID: 0}
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: d7b44c964befb3c4e89216b13d880dba, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: fe5ad718720d728488294f473e89eaf5, type: 2}
     Salen: []
     Entran: []
-    dialogueText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-      eleifend lectus a mauris venenatis, id consectetur nibh rhoncus. Nulla ultrices
-      mi a ornare porttitor. Duis ac.
+    dialogueText: "Vale, listo. Stan, ll\xE9velo a la sala del despertar."
+    textSpeed: 0.01
+  - speakerName: Stan
+    activo: L
+    speakerAudio: {fileID: 8300000, guid: f9265d00291cd45429143d2d5097686a, type: 3}
+    LCharacterImage: {fileID: 1027982670}
+    LCharacterMaterial: {fileID: 2100000, guid: 31b62235b3c1e7e4a81d01e4c18ee528, type: 2}
+    RCharacterImage: {fileID: 1120333640}
+    RCharacterMaterial: {fileID: 2100000, guid: 3dfa9883d0e347b4f8643f3d14fd9eb4, type: 2}
+    Salen: []
+    Entran: []
+    dialogueText: De acuerdo.
     textSpeed: 0.01
 --- !u!95 &2074247292
 Animator:
@@ -1848,6 +1931,209 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2131701173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131701174}
+  - component: {fileID: 2131701176}
+  - component: {fileID: 2131701175}
+  - component: {fileID: 2131701177}
+  m_Layer: 5
+  m_Name: Oscuro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2131701174
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299494225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.0007782}
+  m_SizeDelta: {x: 1920, y: 1080.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2131701175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2131701176
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701173}
+  m_CullTransparentMesh: 1
+--- !u!95 &2131701177
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd2b5ba03753c8e4992a44353de59747, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2146687113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2146687117}
+  - component: {fileID: 2146687116}
+  - component: {fileID: 2146687115}
+  - component: {fileID: 2146687114}
+  m_Layer: 0
+  m_Name: Fondo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &2146687114
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146687113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2146687115
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146687113}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 77195fc29c1d6d34e8fd0118f8c2af89, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2146687116
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146687113}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2146687117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146687113}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0429, y: 1.0366, z: 0.02342473}
+  m_LocalScale: {x: 20.61713, y: 11.671023, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1856,6 +2142,6 @@ SceneRoots:
   - {fileID: 1545514094}
   - {fileID: 299494225}
   - {fileID: 1666318248}
-  - {fileID: 1724054661}
+  - {fileID: 2146687117}
   - {fileID: 1120333646}
   - {fileID: 1027982676}
