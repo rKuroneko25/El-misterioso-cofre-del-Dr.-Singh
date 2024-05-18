@@ -13,7 +13,9 @@ TagManager:
   - Parrafo2
   - Parrafo3
   - Parrafo4
-  - fail
+  - ciudad
+  - Tuberia
+  - Manivela
   layers:
   - Default
   - TransparentFX
