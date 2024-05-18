@@ -59,9 +59,8 @@ public class Dialogue1_1 : MonoBehaviour
 
     void Update()
     {
-        if (!maninRelajate)
-        {
-            if (Input.GetMouseButtonDown(0))
+        if (!maninRelajate) {
+            if(Input.GetMouseButtonDown(0))
             {
                 if (textComponent.text == dialogueLines[index].dialogueText)
                 {
@@ -105,7 +104,7 @@ public class Dialogue1_1 : MonoBehaviour
         {
             StartCoroutine(Finalizar());
         }
-    }
+    } 
 
     IEnumerator Dialogar()
     {
@@ -143,67 +142,56 @@ public class Dialogue1_1 : MonoBehaviour
         }
 
         //Algún personaje sale del diálogo
-        if (dialogueLines[index].Salen.Length > 0)
-        {
+        if (dialogueLines[index].Salen.Length > 0) {
             SalenAnimators = new Animator[dialogueLines[index].Salen.Length];
-            for (int i = 0; i < dialogueLines[index].Salen.Length; i++)
-            {
+            for (int i = 0; i < dialogueLines[index].Salen.Length; i++) {
                 SalenAnimators[i] = dialogueLines[index].Salen[i].GetComponent<Animator>();
             }
-            foreach (Animator animator in SalenAnimators)
-            {
+            foreach (Animator animator in SalenAnimators) {
                 animator.SetTrigger("Salir");
             }
             yield return new WaitForSeconds(1f); //Perate que tienen que salir
 
-            foreach (GameObject go in dialogueLines[index].Salen)
-            { //Al salir, se desactivan
+            foreach (GameObject go in dialogueLines[index].Salen) { //Al salir, se desactivan
                 go.SetActive(false);
             }
         }
 
         //Algún personaje entra al diálogo
-        if (dialogueLines[index].Entran.Length > 0)
-        {
+        if (dialogueLines[index].Entran.Length > 0) {
 
-            foreach (GameObject go in dialogueLines[index].Entran)
-            { //Antes de entrar, se activan
+            foreach (GameObject go in dialogueLines[index].Entran) { //Antes de entrar, se activan
                 go.SetActive(true);
             }
 
             EntranAnimators = new Animator[dialogueLines[index].Entran.Length];
-            for (int i = 0; i < dialogueLines[index].Entran.Length; i++)
-            {
+            for (int i = 0; i < dialogueLines[index].Entran.Length; i++) {
                 EntranAnimators[i] = dialogueLines[index].Entran[i].GetComponent<Animator>();
             }
-            foreach (Animator animator in EntranAnimators)
-            {
+            foreach (Animator animator in EntranAnimators) {
                 animator.SetTrigger("Entrar");
             }
             yield return new WaitForSeconds(1f); //Perate que tienen que entrar
         }
-
+        
         maninRelajate = false;
 
-        if (dialogueLines[index].activo != null)
-        {
-            if (dialogueLines[index].activo == "L")
-            {
+        if (dialogueLines[index].activo != null) {
+            if (dialogueLines[index].activo == "L") {
                 //Desacticar Lips en el otro para que se vea la imagen completa base
-                if (dialogueLines[index].RCharacterImage != null)
-                {
+                if (dialogueLines[index].RCharacterImage != null) {
                     dialogueLines[index].RCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //lipsync
                 dialogueLines[index].LCharacterImage.transform.GetChild(0).gameObject.SetActive(true);
-                dialogueLines[index].LCharacterImage.GetComponent<AudioSource>().clip = dialogueLines[index].speakerAudio;
-                dialogueLines[index].LCharacterImage.GetComponent<AudioSource>().Play();
-            }
-            else
-            {
+                ElQueEstaHablando = dialogueLines[index].LCharacterImage.GetComponent<AudioSource>();
+                if (ElQueEstaHablando != null) {
+                    ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
+                    ElQueEstaHablando.Play();
+                }
+            } else if (dialogueLines[index].activo == "R"){
                 //Desacticar Lips en el otro para que se vea la imagen completa base
-                if (dialogueLines[index].LCharacterImage != null)
-                {
+                if (dialogueLines[index].LCharacterImage != null) {
                     dialogueLines[index].LCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //lipsync
@@ -215,31 +203,27 @@ public class Dialogue1_1 : MonoBehaviour
                 }
             }
         }
-
-        if (dialogueLines[index].LCharacterImage != null)
-        {
+        
+        if (dialogueLines[index].LCharacterImage != null) {
             dialogueLines[index].LCharacterImage.GetComponent<Renderer>().material = dialogueLines[index].LCharacterMaterial; //Cambiar expresión
 
-            Vector3 scaleL = dialogueLines[index].LCharacterImage.transform.localScale;  //Para voltear la imagen
-            if (scaleL.x > 0)
-            {
-                scaleL.x *= -1;
-                dialogueLines[index].LCharacterImage.transform.localScale = scaleL;
-                dialogueLines[index].LCharacterImage.transform.position = new Vector3(-dialogueLines[index].LCharacterImage.transform.position.x, dialogueLines[index].LCharacterImage.transform.position.y, dialogueLines[index].LCharacterImage.transform.position.z);
-            }
+        //     Vector3 scaleL = dialogueLines[index].LCharacterImage.transform.localScale;  //Para voltear la imagen
+        //     if (scaleL.x > 0) {
+        //         scaleL.x *= -1;
+        //         dialogueLines[index].LCharacterImage.transform.localScale = scaleL;
+        //         dialogueLines[index].LCharacterImage.transform.position = new Vector3(-dialogueLines[index].LCharacterImage.transform.position.x, dialogueLines[index].LCharacterImage.transform.position.y, dialogueLines[index].LCharacterImage.transform.position.z);
+        //     }
         }
 
-        if (dialogueLines[index].RCharacterImage != null)
-        {
+        if (dialogueLines[index].RCharacterImage != null) {
             dialogueLines[index].RCharacterImage.GetComponent<Renderer>().material = dialogueLines[index].RCharacterMaterial; //Cambiar expresión
-
-            Vector3 scaleR = dialogueLines[index].RCharacterImage.transform.localScale;
-            if (scaleR.x < 0)
-            {
-                scaleR.x *= -1;
-                dialogueLines[index].RCharacterImage.transform.localScale = scaleR;
-                dialogueLines[index].RCharacterImage.transform.position = new Vector3(-dialogueLines[index].RCharacterImage.transform.position.x, dialogueLines[index].RCharacterImage.transform.position.y, dialogueLines[index].RCharacterImage.transform.position.z);
-            }
+            
+        //     Vector3 scaleR = dialogueLines[index].RCharacterImage.transform.localScale;
+        //     if (scaleR.x < 0) {
+        //         scaleR.x *= -1;
+        //         dialogueLines[index].RCharacterImage.transform.localScale = scaleR;
+        //         dialogueLines[index].RCharacterImage.transform.position = new Vector3(-dialogueLines[index].RCharacterImage.transform.position.x, dialogueLines[index].RCharacterImage.transform.position.y, dialogueLines[index].RCharacterImage.transform.position.z);
+        //     }
         }
 
         nameComponent.text = dialogueLines[index].speakerName;
@@ -248,18 +232,15 @@ public class Dialogue1_1 : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator Finalizar()
-    {
+    IEnumerator Finalizar(){
         textComponent.text = string.Empty;
         nameComponent.text = string.Empty;
 
         //Desactivar personajes al final del diálogo si existen con la animacion de salir
-        if (dialogueLines[index].LCharacterImage != null)
-        {
+        if (dialogueLines[index].LCharacterImage != null) {
             dialogueLines[index].LCharacterImage.GetComponent<Animator>().SetTrigger("Salir");
         }
-        if (dialogueLines[index].RCharacterImage != null)
-        {
+        if (dialogueLines[index].RCharacterImage != null) {
             dialogueLines[index].RCharacterImage.GetComponent<Animator>().SetTrigger("Salir");
         }
 
@@ -267,12 +248,10 @@ public class Dialogue1_1 : MonoBehaviour
             gameObject.GetComponent<Animator>().SetTrigger("Desaparecer");
         }
 
-        if (dialogueLines[index].LCharacterImage != null)
-        {
+        if (dialogueLines[index].LCharacterImage != null) {
             dialogueLines[index].LCharacterImage.SetActive(false);
         }
-        if (dialogueLines[index].RCharacterImage != null)
-        {
+        if (dialogueLines[index].RCharacterImage != null) {
             dialogueLines[index].RCharacterImage.SetActive(false);
         }
 
@@ -288,4 +267,31 @@ public class Dialogue1_1 : MonoBehaviour
         gameObject.SetActive(false);
         
     }
+
+    IEnumerator Startt()
+    {
+        oscurito.SetActive(true);
+        if (!SceneManager.GetActiveScene().name.Contains("Evento")) {
+            gameObject.GetComponent<Animator>().SetTrigger("Aparece");
+            // yield return new WaitForSeconds(1.5f);
+        }
+        yield return new WaitForSeconds(1.5f);
+        StartDialogue();
+    }
+
+    void NextScene()
+    {
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene(EscenaSiguiente);
+    }
+
+    // void ActivarEvento()
+    // {
+    //     Debug.Log("Activar evento");
+    // }
+
+    // void DesactivarEvento()
+    // {
+    //     Debug.Log("Desactivar evento");
+    // }
 }
