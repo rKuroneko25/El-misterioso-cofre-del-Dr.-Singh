@@ -1,12 +1,13 @@
 using UnityEngine;
-using TMPro; // Importa el espacio de nombres TMPro
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CuentaAtras : MonoBehaviour
 {
-    public float totalTime = 60f; // Tiempo total en segundos
-    private float currentTime;    // Tiempo restante
+    public float totalTime = 60f;
+    private float currentTime;
 
-    public TextMeshProUGUI countdownText; // Referencia al texto donde se muestra la cuenta atrás
+    public TextMeshProUGUI countdownText;
 
     void Start()
     {
@@ -15,19 +16,27 @@ public class CuentaAtras : MonoBehaviour
 
     void Update()
     {
-        // Resta el tiempo
         currentTime -= Time.deltaTime;
 
-        // Actualiza el texto mostrando el tiempo restante
-        countdownText.text = "Tiempo Restante: " + currentTime.ToString("F0"); // "F0" para mostrar como número entero
+        // Asegúrate de que currentTime no caiga por debajo de cero
+        if (currentTime < 0)
+        {
+            currentTime = 0;
+        }
 
-        // Controla el final de la cuenta atrás
+        int minutes = Mathf.FloorToInt(currentTime / 60F);
+        int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
+
+        string formattedTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        countdownText.text = formattedTime;
+
         if (currentTime <= 0)
         {
-            // Aquí puedes hacer lo que quieras al finalizar la cuenta atrás
             Debug.Log("Tiempo agotado");
-            // Por ejemplo, detener el juego
-            Time.timeScale = 0f; // Detiene el tiempo del juego
+            Time.timeScale = 0f;
+
+            SceneManager.LoadScene("SiguienteEscena");
         }
     }
 }

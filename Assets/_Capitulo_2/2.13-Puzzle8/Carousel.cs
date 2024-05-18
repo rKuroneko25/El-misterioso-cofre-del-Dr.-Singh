@@ -4,13 +4,16 @@ using UnityEngine.UI; // Necesario para Image
 public class Carousel : MonoBehaviour
 {
     public Sprite[] images; // Array para almacenar las imágenes del carrusel.
-    private int currentIndex = 0; // Índice de la imagen actualmente visible.
+    public int currentIndex = 0; // Índice de la imagen actualmente visible.
     private Image imagen; // Componente Image del objeto
 
     void Start()
     {
         // Obtiene el componente Image del objeto
         imagen = GetComponent<Image>();
+
+        // Asegurarse de que la imagen esté por debajo de la capa superior
+        imagen.canvas.sortingOrder = -100; // Disminuye este número si necesitas que la imagen esté aún más abajo
 
         UpdateCarousel();
     }

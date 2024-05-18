@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Boton : MonoBehaviour
+public class Boton : MonoBehaviour, IPointerClickHandler
 {
     public Carousel galeria;
     public bool esSiguiente;
 
-    void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (esSiguiente)
         {
