@@ -8,7 +8,8 @@ public class Giratubería : MonoBehaviour
     public int position;
     public int posicionCorrecta;
     private Animator animator;
-    
+    private AudioManager audioManager;
+
     static int tuberiasCorrectas = 0;
     // Start is called before the first frame update
     void Start()
@@ -59,13 +60,20 @@ public class Giratubería : MonoBehaviour
     }
 
     IEnumerator triggerAnimationManivela(){
+        audioManager = FindObjectOfType<AudioManager>();
         animator.SetTrigger("giraManivela");
+        Debug.Log("Sonido de valvula");
+        audioManager.Play("valvula");
         yield return new WaitForSeconds(1.5f);
         animator.ResetTrigger("giraManivela");
+        Debug.Log("Sonido de agua");
+        audioManager.Play("agua");
     }
 
     IEnumerator triggerAnimationTub(){
+        audioManager = FindObjectOfType<AudioManager>();
         animator.SetTrigger("rot"+position.ToString());
+        audioManager.Play("tuberia");
         yield return new WaitForSeconds(1.0f);
         animator.ResetTrigger("rot"+position.ToString());
     }
