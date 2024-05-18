@@ -13,6 +13,7 @@ TagManager:
   - Parrafo2
   - Parrafo3
   - Parrafo4
+  - fail
   layers:
   - Default
   - TransparentFX

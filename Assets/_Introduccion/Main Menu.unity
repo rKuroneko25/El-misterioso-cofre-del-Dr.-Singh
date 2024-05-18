@@ -846,7 +846,7 @@ MonoBehaviour:
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1585,8 +1585,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: No
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2498,8 +2498,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "S\xED"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3040,7 +3040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &605358866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_text: "Resoluci\xF3n\nPantalla completa\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3634,8 +3634,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xBFSeguro que quieres continuar?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3793,7 +3793,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3926,8 +3926,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1920 x 1080
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4818,7 +4818,7 @@ MonoBehaviour:
   m_text: "M\xFAsica\nEfectos de sonido\nVoces"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7042,7 +7042,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7759,7 +7759,7 @@ MonoBehaviour:
   m_text: "V\xEDdeo\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8772,7 +8772,7 @@ MonoBehaviour:
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
