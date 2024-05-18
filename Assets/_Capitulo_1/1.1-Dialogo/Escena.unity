@@ -186,8 +186,8 @@ MonoBehaviour:
 
     C'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -461,7 +461,6 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
   m_IsActive: 0
 --- !u!82 &1027982671
 AudioSource:
@@ -1106,8 +1105,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1836,7 +1835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8973442d34f27c4aabab26b5cc8be33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EscenaSiguiente: Escena_2
+  EscenaSiguiente: escena_2
   oscurito: {fileID: 2131701173}
   OscuroEnd: {fileID: 373349750}
   nameComponent: {fileID: 1543617364}
@@ -2145,3 +2144,4 @@ SceneRoots:
   - {fileID: 2146687117}
   - {fileID: 1120333646}
   - {fileID: 1027982676}
+  - {fileID: 1724054661}
