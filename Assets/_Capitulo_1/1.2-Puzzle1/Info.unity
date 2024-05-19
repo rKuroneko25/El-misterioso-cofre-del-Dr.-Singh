@@ -623,7 +623,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pasan unos minutos, lleg\xE1is andando al Archivo historico de Birmingham..."
+  m_text: "Pasados unos minutos, llega la polic\xEDa e inform\xE1is del incidente,
+    luego, tal como dijisteis, os dirig\xEDs andando al Archivo hist\xF3rico de Birmingham..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa3439d8226979b4984dfa9e3de0f530, type: 2}
   m_sharedMaterial: {fileID: 918326584093313041, guid: aa3439d8226979b4984dfa9e3de0f530, type: 2}

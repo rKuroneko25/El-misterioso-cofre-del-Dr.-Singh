@@ -5219,6 +5219,7 @@ MonoBehaviour:
   pauseHover: {fileID: 153336123}
   resumeHover: {fileID: 199952589}
   GuardarEscena: 17
+  GuardarEscena: 17
 --- !u!95 &2074247292
 Animator:
   serializedVersion: 5
