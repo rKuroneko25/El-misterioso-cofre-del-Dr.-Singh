@@ -24,11 +24,11 @@ public class Botones : MonoBehaviour
     public bool exit; //Y se va
     private bool ending; //para el update
 
-    private AudioManager audioManager;
+    private AudioManager2 audioManager;
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        audioManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager2>();
 
         done = false;
         exit = false;

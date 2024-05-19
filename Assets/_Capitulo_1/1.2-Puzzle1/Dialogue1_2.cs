@@ -8,7 +8,6 @@ public class Dialogue1_2 : MonoBehaviour
 {
     public TextMeshProUGUI nameComponent;
     public TextMeshProUGUI textComponent;
-    
 
     [System.Serializable]
     public class DialogueLine

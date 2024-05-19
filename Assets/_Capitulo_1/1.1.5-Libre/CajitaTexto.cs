@@ -24,11 +24,17 @@ public class CajitaTexto : MonoBehaviour
 
     private Coroutine RefTypeLine;     //Referencia a la corrutina de escribir
 
-    private AudioManager audioManager;
+    private AudioManager musicManager;
+    private AudioManager2 sfxManager;
+
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        sfxManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager2>();
+
+        musicManager.Stop(musicManager.GetCurrentPlayingSong());
+        musicManager.Play("Libre");
     }
 
     void OnEnable()
@@ -43,6 +49,8 @@ public class CajitaTexto : MonoBehaviour
 
     void Update()
     {
+        sfxManager.Volume(PlayerPrefs.GetFloat("VolumenSFX"));
+        musicManager.Volume(PlayerPrefs.GetFloat("VolumenMusica"));
         if (!maninRelajate) {
             if(Input.GetMouseButtonDown(0))
             {
@@ -54,8 +62,8 @@ public class CajitaTexto : MonoBehaviour
                 {
                     StopCoroutine(RefTypeLine);
                     textComponent.text = textLines[index];
-                    if (audioManager.IsPlaying("TypingText")) {
-                        audioManager.Stop("TypingText");
+                    if (sfxManager.IsPlaying("TypingText")) {
+                        sfxManager.Stop("TypingText");
                     }
                 }
             }
@@ -84,7 +92,7 @@ public class CajitaTexto : MonoBehaviour
 
     IEnumerator Texto()
     {
-        audioManager.Play("TypingText");
+        sfxManager.Play("TypingText");
         nameComponent.text = nombre;
         textComponent.text = string.Empty;
         RefTypeLine = StartCoroutine(TypeLine());
@@ -98,8 +106,8 @@ public class CajitaTexto : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-        if (audioManager.IsPlaying("TypingText")) {
-            audioManager.Stop("TypingText");
+        if (sfxManager.IsPlaying("TypingText")) {
+            sfxManager.Stop("TypingText");
         }
     }
 
