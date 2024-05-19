@@ -24,9 +24,12 @@ public class Botones : MonoBehaviour
     public bool exit; //Y se va
     private bool ending; //para el update
 
+    private AudioManager audioManager;
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         done = false;
         exit = false;
         ending = false;
@@ -52,6 +55,7 @@ public class Botones : MonoBehaviour
     //  ZONA 1
     public void Zona1_Derecha()
     {
+        audioManager.Play("ZoneTransition");
         StartCoroutine(Transicion(1,2));
     }
 
@@ -129,11 +133,13 @@ public class Botones : MonoBehaviour
 
     public void Zona2_Izquierda()
     {
+        audioManager.Play("ZoneTransition");
         StartCoroutine(Transicion(2,1));
     }
 
     public void Zona2_Arriba()
     {
+        audioManager.Play("ZoneTransition");
         StartCoroutine(Transicion(2,3));
     }
 
@@ -161,6 +167,7 @@ public class Botones : MonoBehaviour
     //  ZONA 3
     public void Zona3_Izquierda()
     {
+        audioManager.Play("ZoneTransition");
         StartCoroutine(Transicion(3,2));
     }
 

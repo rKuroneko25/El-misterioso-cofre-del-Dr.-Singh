@@ -845,8 +845,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1991,7 +1991,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: TypingText
+    clip: {fileID: 8300000, guid: 07752dbdca17ff3438cf63650229a1e4, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: ZoneTransition
+    clip: {fileID: 8300000, guid: 9f1e35bc6b08f324cbe0a721afec8c06, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: Item
+    clip: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
 --- !u!4 &390163487
 Transform:
   m_ObjectHideFlags: 0
@@ -2142,8 +2157,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3040,7 +3055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605358866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8771,8 +8786,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChangeAudio : MonoBehaviour
 {
-    Slider slider;
+    private Slider slider;
     public AudioManager audioManager;
 
     // Start is called before the first frame update

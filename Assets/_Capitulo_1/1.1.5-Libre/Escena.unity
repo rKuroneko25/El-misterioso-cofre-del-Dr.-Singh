@@ -198,6 +198,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104525813}
   m_CullTransparentMesh: 1
+--- !u!1 &174491991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174491993}
+  - component: {fileID: 174491992}
+  m_Layer: 0
+  m_Name: AudioManager (SFX)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &174491992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174491991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: TypingText
+    clip: {fileID: 8300000, guid: 07752dbdca17ff3438cf63650229a1e4, type: 3}
+    source: {fileID: 0}
+    volume: 0.206
+    loop: 0
+  - name: ZoneTransition
+    clip: {fileID: 8300000, guid: 9f1e35bc6b08f324cbe0a721afec8c06, type: 3}
+    source: {fileID: 0}
+    volume: 0.19
+    loop: 0
+  - name: Item
+    clip: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+--- !u!4 &174491993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174491991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.73544, y: 268.29904, z: -0.4941372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176110486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1492,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7ca7662c0ef80f84792ae6cb18eea28a, type: 2}
   m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1496,7 +1556,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &790251837
@@ -4193,7 +4253,7 @@ MonoBehaviour:
 
     CCCCCCCCCCCCCCCCCCCCC'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7ca7662c0ef80f84792ae6cb18eea28a, type: 2}
   m_sharedMaterial: {fileID: -1960565948442814472, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4257,7 +4317,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2145937358
@@ -4278,3 +4338,4 @@ SceneRoots:
   - {fileID: 750173135}
   - {fileID: 1581403195}
   - {fileID: 1124109545}
+  - {fileID: 174491993}
