@@ -32,6 +32,7 @@ public class Dialogue1_1 : MonoBehaviour
         [TextArea(3, 20)]
         public string dialogueText;
         public float textSpeed;
+        public string musica;                   //Nombre de la música de fondo
         // public bool Evento;
     }
 
@@ -51,8 +52,39 @@ public class Dialogue1_1 : MonoBehaviour
 
     // private bool enEvento;
 
+    private float audioVolume;
+
+    public ButtonHoverDetector pauseHover;
+    public ButtonHoverDetector resumeHover;
+    private bool paused;
+
+    private AudioManager musicManager;
+    private AudioManager2 sfxManager;
+    private string musicaActiva;
+
     void Start()
     {
+        index = 0; //Está en StartDialogue también
+
+        sfxManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager2>();
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        musicaActiva = musicManager.GetCurrentPlayingSong();
+        if (musicaActiva != null) { //Hay música sonando
+            if (musicaActiva == dialogueLines[index].musica) { 
+                //Si la que toca ahora es la misma sigue sonando
+                // musicManager.Play(dialogueLines[index].musica);
+            } else {
+                //Si toca otra, la cambio
+                if (dialogueLines[index].musica != null && dialogueLines[index].musica != "") {
+                    musicManager.Stop(musicaActiva);
+                    musicManager.Play(dialogueLines[index].musica);
+                }
+            }
+        }
+
+
+        paused = false;
+        audioVolume = PlayerPrefs.GetFloat("VolumenVoces");
         nameComponent.text = string.Empty;
         textComponent.text = string.Empty;
         maninRelajate = true;
@@ -78,9 +110,14 @@ public class Dialogue1_1 : MonoBehaviour
 
     void Update()
     {
-        if (!maninRelajate)
-        {
-            if (Input.GetMouseButtonDown(0))
+        sfxManager.Volume(PlayerPrefs.GetFloat("VolumenSFX"));
+        musicManager.Volume(PlayerPrefs.GetFloat("VolumenMusica"));
+        audioVolume = PlayerPrefs.GetFloat("VolumenVoces");
+        if (ElQueEstaHablando != null && ElQueEstaHablando.isPlaying)
+            ElQueEstaHablando.volume = audioVolume;
+
+        if (!maninRelajate) {
+            if(Input.GetMouseButtonDown(0) && !pauseHover.isMouseOverButton && !paused)
             {
                 if (textComponent.text == dialogueLines[index].dialogueText)
                 {
@@ -93,7 +130,18 @@ public class Dialogue1_1 : MonoBehaviour
                     StopCoroutine(RefTypeLine);
                     textComponent.text = dialogueLines[index].dialogueText;
                 }
+            } else if (Input.GetMouseButtonDown(0) && (pauseHover.isMouseOverButton || resumeHover.isMouseOverButton)) {
+                paused = !paused;
             }
+        }
+
+        if (paused)
+        {
+            if (ElQueEstaHablando != null && ElQueEstaHablando.isPlaying)
+                ElQueEstaHablando.Pause();
+        } else {
+            if (ElQueEstaHablando != null && !ElQueEstaHablando.isPlaying)
+                ElQueEstaHablando.UnPause();
         }
     }
 
@@ -108,6 +156,9 @@ public class Dialogue1_1 : MonoBehaviour
     {
         foreach (char c in dialogueLines[index].dialogueText.ToCharArray())
         {
+            while (paused) {
+                yield return null;
+            }
             textComponent.text += c;
             yield return new WaitForSeconds(dialogueLines[index].textSpeed);
         }
@@ -128,6 +179,17 @@ public class Dialogue1_1 : MonoBehaviour
 
     IEnumerator Dialogar()
     {
+        if (dialogueLines[index].musica != null && dialogueLines[index].musica != "") {
+            if (dialogueLines[index].musica != musicaActiva) {
+                musicManager.Stop(musicaActiva);
+                musicaActiva = dialogueLines[index].musica;
+                musicManager.Play(musicaActiva);
+            }
+            if (dialogueLines[index].musica == "Silencio") {
+                musicManager.Stop(musicaActiva);
+            }
+        }
+
         // if (dialogueLines[index].Evento) {
         //     enEvento = !enEvento;
         //     if (enEvento) {

@@ -93,4 +93,10 @@ public class AudioManager : MonoBehaviour
         }
         return s.source.isPlaying;
     }
+
+    public string GetCurrentPlayingSong()
+    {
+        Sound currentPlayingSound = Array.Find(sounds, sound => sound.source.isPlaying);
+        return currentPlayingSound != null ? currentPlayingSound.name : null;
+    }
 }

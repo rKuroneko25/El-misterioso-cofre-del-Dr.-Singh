@@ -22,9 +22,9 @@ public class LUZ : MonoBehaviour
 
         audioManager1.Play("MenuMusic");
 
-        audioManager1.Volume((float)(PlayerPrefs.GetFloat("VolumenMusica")/100));
-        audioManager2.Volume((float)(PlayerPrefs.GetFloat("VolumenSFX")/100));
-        audioManager3.Volume((float)(PlayerPrefs.GetFloat("VolumenVoces")/100));
+        audioManager1.Volume(PlayerPrefs.GetFloat("VolumenMusica"));
+        audioManager2.Volume(PlayerPrefs.GetFloat("VolumenSFX"));
+        audioManager3.Volume(PlayerPrefs.GetFloat("VolumenVoces"));
 
     }
 
