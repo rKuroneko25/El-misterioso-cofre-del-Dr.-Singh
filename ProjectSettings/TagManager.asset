@@ -4,7 +4,27 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - drag
+  - Morgege
+  - Kaufer
+  - Vorbehalt
+  - Kundigung
+  - ContratoEs
+  - Parrafo1
+  - Parrafo2
+  - Parrafo3
+  - Parrafo4
+  - ciudad
+  - Tuberia
+  - Manivela
+  - AR
+  - AB
+  - I
+  - D
+  - ARI
+  - ARD
+  - ABI
+  - ABD
+  - E
   layers:
   - Default
   - TransparentFX
