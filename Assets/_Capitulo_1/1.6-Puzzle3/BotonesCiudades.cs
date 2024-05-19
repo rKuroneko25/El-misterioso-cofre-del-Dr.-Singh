@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class BotonesCiudades : MonoBehaviour
 {   
     private static GameObject BotonSeleccionado= null;
+    public Fallar failScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +53,8 @@ public class BotonesCiudades : MonoBehaviour
     public void Resolver(){
         if(BotonSeleccionado.name != "Bristol"){
             // que ponga el audio de no creo que sea esa
-           Debug.Log("No creo que sea esa");
+            Debug.Log("No creo que sea esa");
+            failScript.fail();
         }
         else{
             // que ponga el audio de puzzle resuelto y se pase a la siguiente escena

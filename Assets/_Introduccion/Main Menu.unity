@@ -1991,7 +1991,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Bum
+    clip: {fileID: 8300000, guid: 7913bcfe80f111b449c057085a553b5d, type: 3}
+    source: {fileID: 0}
+    volume: 0.507
+    loop: 0
 --- !u!4 &390163487
 Transform:
   m_ObjectHideFlags: 0
@@ -3040,7 +3045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605358866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5797,51 +5802,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168239791}
   m_CullTransparentMesh: 1
---- !u!1 &1184525719
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1184525721}
-  - component: {fileID: 1184525720}
-  m_Layer: 0
-  m_Name: AudioManager (Voces)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1184525720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184525719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds: []
---- !u!4 &1184525721
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184525719}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 398.73544, y: 268.29904, z: -0.4941372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204827577
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,7 +6938,7 @@ MonoBehaviour:
   luz: {fileID: 746186899}
   audioManager1: {fileID: 217000779}
   audioManager2: {fileID: 390163486}
-  audioManager3: {fileID: 1184525720}
+  audioManager3: {fileID: 0}
 --- !u!1 &1412181800
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,7 +7974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c77e777d720a6240be27761d22a4ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 1184525720}
+  audioManager: {fileID: 0}
 --- !u!1 &1572492780
 GameObject:
   m_ObjectHideFlags: 0
@@ -9521,5 +9481,4 @@ SceneRoots:
   - {fileID: 139419038}
   - {fileID: 217000778}
   - {fileID: 390163487}
-  - {fileID: 1184525721}
   - {fileID: 112509891}
