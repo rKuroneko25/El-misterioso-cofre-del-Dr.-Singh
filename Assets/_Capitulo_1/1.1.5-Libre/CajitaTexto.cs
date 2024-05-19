@@ -26,7 +26,18 @@ public class CajitaTexto : MonoBehaviour
 
     void Start()
     {
-
+        switch (PlayerPrefs.GetInt("SaveActual"))
+        {
+            case 1:
+                PlayerPrefs.SetInt("Escena1", 7);
+                break;
+            case 2:
+                PlayerPrefs.SetInt("Escena2", 7);
+                break;
+            case 3:
+                PlayerPrefs.SetInt("Escena3", 7);
+                break;
+        }
     }
 
     void OnEnable()

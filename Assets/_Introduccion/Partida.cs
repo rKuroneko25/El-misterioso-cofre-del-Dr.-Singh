@@ -20,7 +20,7 @@ public class Partida : MonoBehaviour
         {
             Save1.SetActive(true);
             Vacio1.SetActive(false);
-            Save1.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena1") < 10 ? 1 : 2) + "\nSecretos: " + PlayerPrefs.GetInt("Secrets1");
+            Save1.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena1") < 10 ? 1 : 2) + "\nSecretos: N/A";
         }
         else
         {
@@ -32,7 +32,7 @@ public class Partida : MonoBehaviour
         {
             Save2.SetActive(true);
             Vacio2.SetActive(false);
-            Save2.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena2") < 10 ? 1 : 2) + "\nSecretos: " + PlayerPrefs.GetInt("Secrets2");
+            Save2.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena2") < 10 ? 1 : 2) + "\nSecretos: N/A";
         }
         else
         {
@@ -44,7 +44,7 @@ public class Partida : MonoBehaviour
         {
             Save3.SetActive(true);
             Vacio3.SetActive(false);
-            Save3.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena3") < 10 ? 1 : 2) + "\nSecretos: " + PlayerPrefs.GetInt("Secrets3");
+            Save3.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Capítulo: " + (PlayerPrefs.GetInt("Escena3") < 10 ? 1 : 2) + "\nSecretos: N/A";
         }
         else
         {

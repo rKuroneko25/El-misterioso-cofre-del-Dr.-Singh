@@ -11,6 +11,8 @@ public class NuevaPartida : MonoBehaviour
     {
         PlayerPrefs.SetInt("Save1", 1);
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
+        PlayerPrefs.SetInt("Escena1",0);
+        PlayerPrefs.SetInt("SaveActual", 1);
         SceneManager.LoadScene("_Capitulo_1/1.0-Intro/Escena");
     }
 
@@ -18,6 +20,8 @@ public class NuevaPartida : MonoBehaviour
     {
         PlayerPrefs.SetInt("Save2", 1);
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
+        PlayerPrefs.SetInt("Escena2",0);
+        PlayerPrefs.SetInt("SaveActual", 2);
         SceneManager.LoadScene("_Capitulo_1/1.0-Intro/Escena");
     }
 
@@ -25,6 +29,8 @@ public class NuevaPartida : MonoBehaviour
     {
         PlayerPrefs.SetInt("Save3", 1);
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
+        PlayerPrefs.SetInt("Escena3",0);
+        PlayerPrefs.SetInt("SaveActual", 3);
         SceneManager.LoadScene("_Capitulo_1/1.0-Intro/Escena");
     }
 }

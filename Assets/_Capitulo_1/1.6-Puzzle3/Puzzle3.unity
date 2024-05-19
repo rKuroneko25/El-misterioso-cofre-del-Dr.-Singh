@@ -6079,6 +6079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameComponent: {fileID: 104919222}
   textComponent: {fileID: 1522420373}
+  GuardarEscena: 12
   dialogueLines:
   - speakerName: Dr. Singh
     speakerTexture: {fileID: 0}

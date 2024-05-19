@@ -41,8 +41,7 @@ public class ChangeAudio : MonoBehaviour
 
     public void ChangeSlider3()
     {
-        audioManager.Volume((float)(slider.value / 100));
-        PlayerPrefs.SetFloat("VolumenVoces", slider.value);
+        PlayerPrefs.SetFloat("VolumenVoces", (float)(slider.value / 100));
     }
 
 }
