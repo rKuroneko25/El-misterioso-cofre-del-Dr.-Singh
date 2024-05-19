@@ -2279,7 +2279,7 @@ MonoBehaviour:
     RCharacterMaterial: {fileID: 2100000, guid: 167440d7fc986bf49a617a57109f7947, type: 2}
     Salen: []
     Entran: []
-    dialogueText: Calla Amelia, eso es serio.
+    dialogueText: Calla Amelia, esto es serio.
     textSpeed: 0.01
   - speakerName: Harry
     activo: R
@@ -2292,9 +2292,9 @@ MonoBehaviour:
     - {fileID: 1120333640}
     Entran:
     - {fileID: 1659671729}
-    dialogueText: "Ver\xE1s, el Gaelico Man\xE9s es un idioma que est\xE1 ya en desuso,
-      era propio de la Isla de Man hace unos 26 a\xF1os, pero, en la actualidad ya
-      no es usado siquiera para documentos oficiales."
+    dialogueText: "Ver\xE1s, el Ga\xE9lico Man\xE9s es un idioma que est\xE1 ya en
+      desuso, era propio de la Isla de Man hace unos 26 a\xF1os, pero, en la actualidad
+      ya no es usado siquiera para documentos oficiales."
     textSpeed: 0.01
   - speakerName: Amelia
     activo: L
@@ -2321,7 +2321,7 @@ MonoBehaviour:
     textSpeed: 0.01
   - speakerName: 
     activo: a
-    speakerAudio: {fileID: 8300000, guid: 1be73ca58dc9e8241916ca0a782dc714, type: 3}
+    speakerAudio: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
     LCharacterImage: {fileID: 1027982670}
     LCharacterMaterial: {fileID: 2100000, guid: 0e1b84b96382f8c43a252bb1d8a0f211, type: 2}
     RCharacterImage: {fileID: 1659671729}
