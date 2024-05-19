@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!28 &-1261415490239308554
+=======
+--- !u!28 &-488241689883214569
+>>>>>>> 2b39b03153debbdc8c0a90b441e20bce9a8dd5c1
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +65,11 @@ MonoBehaviour:
   m_Name: Nintendo-DS-BIOS SDF
   m_EditorClassIdentifier: 
   hashCode: 1705918412
+<<<<<<< HEAD
   material: {fileID: 347070212692987084}
+=======
+  material: {fileID: 918326584093313041}
+>>>>>>> 2b39b03153debbdc8c0a90b441e20bce9a8dd5c1
   materialHashCode: 138965868
   m_Version: 1.1.0
   m_SourceFontFileGUID: 75b264b46ff6ca14185543d4f39bbf08
@@ -3019,7 +3027,11 @@ MonoBehaviour:
     m_GlyphIndex: 156
     m_Scale: 1
   m_AtlasTextures:
+<<<<<<< HEAD
   - {fileID: -1261415490239308554}
+=======
+  - {fileID: -488241689883214569}
+>>>>>>> 2b39b03153debbdc8c0a90b441e20bce9a8dd5c1
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0
@@ -3944,7 +3956,11 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
+<<<<<<< HEAD
 --- !u!21 &347070212692987084
+=======
+--- !u!21 &918326584093313041
+>>>>>>> 2b39b03153debbdc8c0a90b441e20bce9a8dd5c1
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -3980,7 +3996,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+<<<<<<< HEAD
         m_Texture: {fileID: -1261415490239308554}
+=======
+        m_Texture: {fileID: -488241689883214569}
+>>>>>>> 2b39b03153debbdc8c0a90b441e20bce9a8dd5c1
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:

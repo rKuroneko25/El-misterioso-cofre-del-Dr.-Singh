@@ -24,6 +24,40 @@ EditorBuildSettings:
     path: Assets/_Capitulo_1/1.1-Dialogo/Escena_4.unity
     guid: 9912e14f798229840b8f20eb3169f875
   - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena_4_Evento.unity
+    guid: 2abc99e24ea0c3c4ca47c897513b2482
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena_4_2.unity
+    guid: c4738558bfe32944a89ed11466de4957
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1.5-Libre/Escena.unity
+    guid: c351a561b61247445a68efcaa8832869
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1.5-Libre/Escena_2.unity
+    guid: 3d3dbe2489e02cf4ab235be2579926f5
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.2-Puzzle1/Puzzle1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Introduccion/Main Menu.unity
+    guid: c688303c531b5d04f8d2f6652447e098
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.0-Intro/Escena.unity
+    guid: d23f68ee9c25c124baf28cd3486fa352
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena.unity
+    guid: 7d821166eaec90743a63a0274898305c
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena_2.unity
+    guid: 5a6fd91806e10c247a7f276f03619a50
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena_3.unity
+    guid: 1cc9fde3c6713694a9534698970b4f37
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.1-Dialogo/Escena_4.unity
+    guid: 9912e14f798229840b8f20eb3169f875
+  - enabled: 1
     path: Assets/_Capitulo_1/1.1-Dialogo/Escena_4_2.unity
     guid: c4738558bfe32944a89ed11466de4957
   - enabled: 1

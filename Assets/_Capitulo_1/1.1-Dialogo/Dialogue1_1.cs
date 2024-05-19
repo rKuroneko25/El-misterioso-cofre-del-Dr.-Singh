@@ -241,6 +241,14 @@ public class Dialogue1_1 : MonoBehaviour
                     ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
                     ElQueEstaHablando.Play();
                 }
+            } else { // cualquier letra, el de la derecha emite el sonido
+                dialogueLines[index].RCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
+                dialogueLines[index].LCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
+                ElQueEstaHablando = dialogueLines[index].RCharacterImage.GetComponent<AudioSource>();
+                if (ElQueEstaHablando != null) {
+                    ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
+                    ElQueEstaHablando.Play();
+                }
             }
         }
 

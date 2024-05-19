@@ -24,6 +24,8 @@ public class CajitaTexto : MonoBehaviour
 
     private Coroutine RefTypeLine;     //Referencia a la corrutina de escribir
 
+    private AudioManager audioManager;
+
     void Start()
     {
         switch (PlayerPrefs.GetInt("SaveActual"))
@@ -63,6 +65,9 @@ public class CajitaTexto : MonoBehaviour
                 {
                     StopCoroutine(RefTypeLine);
                     textComponent.text = textLines[index];
+                    if (audioManager.IsPlaying("TypingText")) {
+                        audioManager.Stop("TypingText");
+                    }
                 }
             }
         }
@@ -90,6 +95,7 @@ public class CajitaTexto : MonoBehaviour
 
     IEnumerator Texto()
     {
+        audioManager.Play("TypingText");
         nameComponent.text = nombre;
         textComponent.text = string.Empty;
         RefTypeLine = StartCoroutine(TypeLine());
@@ -102,6 +108,9 @@ public class CajitaTexto : MonoBehaviour
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+        }
+        if (audioManager.IsPlaying("TypingText")) {
+            audioManager.Stop("TypingText");
         }
     }
 

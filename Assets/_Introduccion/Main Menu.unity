@@ -845,8 +845,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1992,6 +1992,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: TypingText
+    clip: {fileID: 8300000, guid: 07752dbdca17ff3438cf63650229a1e4, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: ZoneTransition
+    clip: {fileID: 8300000, guid: 9f1e35bc6b08f324cbe0a721afec8c06, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: Item
+    clip: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  sounds:
   - name: Bum
     clip: {fileID: 8300000, guid: 7913bcfe80f111b449c057085a553b5d, type: 3}
     source: {fileID: 0}
@@ -2147,8 +2163,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8731,8 +8747,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cap\xEDtulo X\nSecretos: X"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
