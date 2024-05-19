@@ -1522,10 +1522,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: c90558fdb10326c43ab8e89eb208808e, type: 3}
+    clip: {fileID: 8300000, guid: 51ea300bfc07e7d44928a814075989c0, type: 3}
     source: {fileID: 0}
     volume: 0.5
-    loop: 0
+    loop: 1
+  - name: Operacion
+    clip: {fileID: 8300000, guid: 017f4e0b5309ab74cab981866b80e364, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Hospital
+    clip: {fileID: 8300000, guid: 67447c551115d414d864d9b13e8d518c, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Robo
+    clip: {fileID: 8300000, guid: e563a73f69b05084e9b53c19fea78eb0, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Robada
+    clip: {fileID: 8300000, guid: 5676e271a1c0c60479a3eb2a111148bc, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Libre
+    clip: {fileID: 8300000, guid: afcfa39fe3075e74d984a83d7446c56f, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Historico
+    clip: {fileID: 8300000, guid: de4e06a5381d7894c881e4a09f24fe91, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Misterio
+    clip: {fileID: 8300000, guid: c8653c12cfc44b84b8efc4e76c2b3b77, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Calle
+    clip: {fileID: 8300000, guid: 3040f32a9f7f8cb48b2991d17c57bfb7, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
+  - name: Puzle
+    clip: {fileID: 8300000, guid: 66e293ec1a5f9764fb8fa4fb7729e5b2, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    loop: 1
 --- !u!1 &249782483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,66 +2007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 217000779}
---- !u!1 &390163485
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 390163487}
-  - component: {fileID: 390163486}
-  m_Layer: 0
-  m_Name: AudioManager (SFX)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &390163486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390163485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39e1f1a135f9b043b13c4e3ace3fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: TypingText
-    clip: {fileID: 8300000, guid: 07752dbdca17ff3438cf63650229a1e4, type: 3}
-    source: {fileID: 0}
-    volume: 0
-    loop: 0
-  - name: ZoneTransition
-    clip: {fileID: 8300000, guid: 9f1e35bc6b08f324cbe0a721afec8c06, type: 3}
-    source: {fileID: 0}
-    volume: 0
-    loop: 0
-  - name: Item
-    clip: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
-    source: {fileID: 0}
-    volume: 0
-    loop: 0
---- !u!4 &390163487
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390163485}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 398.73544, y: 268.29904, z: -0.4941372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  audioManager2: {fileID: 2084872859}
 --- !u!1 &406121298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,8 +3339,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Resoluci\xF3n\nPantalla completa\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3807,8 +3793,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4772,7 +4758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c77e777d720a6240be27761d22a4ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 390163486}
+  audioManager: {fileID: 217000779}
+  audioManager2: {fileID: 2084872859}
 --- !u!1 &1043733776
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,8 +4819,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "M\xFAsica\nEfectos de sonido\nVoces"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6947,8 +6934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   luz: {fileID: 746186899}
   audioManager1: {fileID: 217000779}
-  audioManager2: {fileID: 390163486}
-  audioManager3: {fileID: 0}
+  audioManager2: {fileID: 0}
+  audioManager3: {fileID: 1184525720}
 --- !u!1 &1412181800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7011,8 +6998,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7728,8 +7715,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "V\xEDdeo\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
-  m_sharedMaterial: {fileID: 347070212692987084, guid: 39b0850143e0fb34d8f23311203956f3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7984,7 +7971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c77e777d720a6240be27761d22a4ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1184525720}
+  audioManager2: {fileID: 2084872859}
 --- !u!1 &1572492780
 GameObject:
   m_ObjectHideFlags: 0
@@ -9480,6 +9468,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuBorrar: {fileID: 1221720134}
+--- !u!1 &2084872858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084872860}
+  - component: {fileID: 2084872859}
+  m_Layer: 0
+  m_Name: AudioManager (SFX)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2084872859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084872858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdd1015de45e4248a55d7a573cc9c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: TypingText
+    clip: {fileID: 8300000, guid: 07752dbdca17ff3438cf63650229a1e4, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: ZoneTransition
+    clip: {fileID: 8300000, guid: 9f1e35bc6b08f324cbe0a721afec8c06, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+  - name: Item
+    clip: {fileID: 8300000, guid: e34d74a27107bd64189ab3b8a9709e5c, type: 3}
+    source: {fileID: 0}
+    volume: 0
+    loop: 0
+--- !u!4 &2084872860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084872858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.73544, y: 268.29904, z: -0.4941372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9490,5 +9538,6 @@ SceneRoots:
   - {fileID: 1358295174}
   - {fileID: 139419038}
   - {fileID: 217000778}
-  - {fileID: 390163487}
+  - {fileID: 2084872860}
+  - {fileID: 1184525721}
   - {fileID: 112509891}
