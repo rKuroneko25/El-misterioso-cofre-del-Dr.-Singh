@@ -8,15 +8,16 @@ public class Finish : MonoBehaviour
     public List<GameObject> squares; // Lista de los 12 cuadrados
     private List<Vector3> correctPositions = new List<Vector3>();
 
+    public Fallar failScript;
 
     // Start is called before the first frame update
     void Start()
     {
         correctPositions.Add(new Vector3(-5.04223442f, 2.66089821f, 8.072f));
-        correctPositions.Add(new Vector3(-4.04223394f,2.66089821f,8.072f));
-        correctPositions.Add(new Vector3(-3.04223442f,2.66089821f,8.072f));
-        correctPositions.Add(new Vector3(-5.04223394f,1.65989828f,8.10283375f));
-        correctPositions.Add(new Vector3(-4.04223394f,1.65989828f,8.10283375f));
+        correctPositions.Add(new Vector3(-4.04223394f, 2.66089821f, 8.072f));
+        correctPositions.Add(new Vector3(-3.04223442f, 2.66089821f, 8.072f));
+        correctPositions.Add(new Vector3(-5.04223394f, 1.65989828f, 8.10283375f));
+        correctPositions.Add(new Vector3(-4.04223394f, 1.65989828f, 8.10283375f));
         correctPositions.Add(new Vector3(-3.04223442f, 1.65989828f, 8.10283375f));
 
         correctPositions.Add(new Vector3(-5.04223442f, 0.668898284f, 8.10283375f));
@@ -30,9 +31,9 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    
+
     public void Comprobar()
     {
         bool allSquaresInCorrectPosition = true; // Asumimos que todos los cuadrados están en la posición correcta
@@ -50,7 +51,11 @@ public class Finish : MonoBehaviour
         // Si todos los cuadrados están en la posición correcta, llamamos a NextPhase
         if (allSquaresInCorrectPosition)
         {
-            SceneManager.LoadScene("Puzzle1");
+            SceneManager.LoadScene("_Capitulo_1/1.5-Dialogo/Escena");
+        }
+        else
+        {
+            failScript.fail();
         }
     }
 

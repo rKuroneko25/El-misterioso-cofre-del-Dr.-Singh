@@ -9,6 +9,10 @@ public class BotonesResolver : MonoBehaviour
 {
 
     private static int parrafosOcultos = 4;
+
+    public GameObject Amelia;
+    public GameObject Dialogo;
+
     //par de boton y si esta activo o no
     private class Boton
     {
@@ -17,11 +21,11 @@ public class BotonesResolver : MonoBehaviour
         public bool Manual_Contrato;
     }
 
-    private static Boton BotonAnterior= null;
+    private static Boton BotonAnterior = null;
     public Button[] botonesCiudades;
     public GameObject[] parrafosContrato;
     public GameObject ContratoEspanol;
-    private static Dictionary<string, string> parrafos= new Dictionary<string, string>{
+    private static Dictionary<string, string> parrafos = new Dictionary<string, string>{
         {"Morgege", "1"},
         {"Vorbehalt", "2"},
         {"Kaufer", "3"},
@@ -66,8 +70,8 @@ public class BotonesResolver : MonoBehaviour
                 BotonAnterior = null;
 
                 //llamada a revelar parrafo
-                Debug.Log("Revelar Parrafo"+parrafos[nombre]);
-                parrafosContrato[Int32.Parse(parrafos[nombre])-1].SetActive(true);
+                Debug.Log("Revelar Parrafo" + parrafos[nombre]);
+                parrafosContrato[Int32.Parse(parrafos[nombre]) - 1].SetActive(true);
 
 
                 parrafosOcultos--;
@@ -75,6 +79,13 @@ public class BotonesResolver : MonoBehaviour
                 {
                     Debug.Log("Puzzle Resuelto");
                     ContratoEspanol.gameObject.SetActive(true);
+                    Amelia.GetComponent<AudioSource>().clip = Resources.Load("Voces/8_Puzle3/Puzle3_Amelia3") as AudioClip;
+                    Amelia.GetComponent<AudioSource>().Play();
+
+                    Dialogo.SetActive(true);
+                    Dialogo.GetComponent<Dialogue1_2>().escribir(1);
+
+                    Invoke("DesactivarDialogo", 3.0f);
                 }
 
             }
@@ -96,12 +107,12 @@ public class BotonesResolver : MonoBehaviour
             BotonAnterior = new Boton { boton = boton, tag = nombre, Manual_Contrato = Manual_Contrato };
             Debug.Log("Boton " + BotonAnterior.tag + " Activado");
         }
-
-
-
-
     }
 
+    void DesactivarDialogo()
+    {
+        Dialogo.SetActive(false);
+    }
 
 
     /////////////////////////Botones Manual//////////////////////////////////////////

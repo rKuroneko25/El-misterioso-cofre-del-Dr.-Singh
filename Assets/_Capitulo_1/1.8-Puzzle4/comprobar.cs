@@ -1,30 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class comprobar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Fallar failScript;
 
     public void ReadString(string s)
     {
         if (s == "426")
         {
-            //Enviar a pablo a la siguiente escena un bool true
+            SceneManager.LoadScene("_Capitulo_1/1.9-Dialogo/Escena");
         }
         else
         {
-             //Enviar a pablo a la siguiente escena un bool false
+            failScript.fail();
         }
     }
 }

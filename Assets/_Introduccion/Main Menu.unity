@@ -2007,12 +2007,6 @@ MonoBehaviour:
     source: {fileID: 0}
     volume: 0
     loop: 0
-  sounds:
-  - name: Bum
-    clip: {fileID: 8300000, guid: 7913bcfe80f111b449c057085a553b5d, type: 3}
-    source: {fileID: 0}
-    volume: 0.507
-    loop: 0
 --- !u!4 &390163487
 Transform:
   m_ObjectHideFlags: 0

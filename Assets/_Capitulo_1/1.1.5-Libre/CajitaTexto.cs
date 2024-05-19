@@ -28,6 +28,7 @@ public class CajitaTexto : MonoBehaviour
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         switch (PlayerPrefs.GetInt("SaveActual"))
         {
             case 1:

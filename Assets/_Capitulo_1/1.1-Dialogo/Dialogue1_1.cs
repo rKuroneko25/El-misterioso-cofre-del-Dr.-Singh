@@ -341,13 +341,4 @@ public class Dialogue1_1 : MonoBehaviour
         SceneManager.LoadScene(EscenaSiguiente);
     }
 
-    // void ActivarEvento()
-    // {
-    //     Debug.Log("Activar evento");
-    // }
-
-    // void DesactivarEvento()
-    // {
-    //     Debug.Log("Desactivar evento");
-    // }
 }

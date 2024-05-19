@@ -8,7 +8,14 @@ public class Fallar : MonoBehaviour
 {
 
     public GameObject failed;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
+
+    public string scene;
+
+    void Start()
+    {
+        audioManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager>();
+    }
 
     public void fail()
     {
@@ -34,7 +41,7 @@ public class Fallar : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene("Puzzle3");
+        SceneManager.LoadScene(scene);
     }
 
     public void title()
