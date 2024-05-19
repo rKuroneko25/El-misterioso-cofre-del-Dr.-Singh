@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Movimiento : MonoBehaviour
 {   static public int posicion = 1;
+    public Fallar failScript;
 
     Dictionary<string,bool>[] OpcionesBotones=
     new Dictionary<string,bool>[18];
@@ -236,7 +237,7 @@ public class Movimiento : MonoBehaviour
             cambiapos(posicion+1);
         }
         else{
-            
+            failScript.fail();
             //animacion de error, texto de error y retry?
         }
     }
