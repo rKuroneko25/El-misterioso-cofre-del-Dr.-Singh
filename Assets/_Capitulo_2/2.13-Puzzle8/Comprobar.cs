@@ -25,12 +25,17 @@ public class Comprobar : MonoBehaviour
     public void comprobar()
     {
         if (carousel.currentIndex == 3 && 
-            ((draggableImage1.originalPosition.x >= 4 && draggableImage1.originalPosition.y <= 53 && 
-            draggableImage1.originalPosition.y >= -63 && draggableImage1.originalPosition.y <= 80) ||
-            (draggableImage1.originalPosition.x >= -106 && draggableImage1.originalPosition.x <= -55 && 
-            draggableImage1.originalPosition.y >= -63 && draggableImage1.originalPosition.y <= 80)))
+            ((draggableImage1.transform.position.x >= 502 && draggableImage1.transform.position.y <= 538 && 
+            draggableImage1.transform.position.y >= 426 && draggableImage1.transform.position.y <= 550) ||
+            (draggableImage1.transform.position.x >= -106 && draggableImage1.transform.position.x <= 648 && 
+            draggableImage1.transform.position.y >= 609 && draggableImage1.transform.position.y <= 550)))
         {
             final = true;
+        }
+        else{
+            Debug.Log("X" + draggableImage1.transform.position.x);
+            Debug.Log(draggableImage1.transform.position.y);
+            Debug.Log(carousel.currentIndex);
         }
     }
 }
