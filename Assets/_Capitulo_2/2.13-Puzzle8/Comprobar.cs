@@ -25,10 +25,10 @@ public class Comprobar : MonoBehaviour
     public void comprobar()
     {
         if (carousel.currentIndex == 3 && 
-            ((draggableImage1.transform.position.x >= 502 && draggableImage1.transform.position.y <= 538 && 
-            draggableImage1.transform.position.y >= 426 && draggableImage1.transform.position.y <= 550) ||
-            (draggableImage1.transform.position.x >= -106 && draggableImage1.transform.position.x <= 648 && 
-            draggableImage1.transform.position.y >= 609 && draggableImage1.transform.position.y <= 550)))
+            ((draggableImage1.transform.position.x >= 502 && draggableImage1.transform.position.x <= 539 && 
+            draggableImage1.transform.position.y >= 422 && draggableImage1.transform.position.y <= 554) ||
+            (draggableImage1.transform.position.x >= 608 && draggableImage1.transform.position.x <= 647 && 
+            draggableImage1.transform.position.y >= 422 && draggableImage1.transform.position.y <= 554)))
         {
             final = true;
         }
