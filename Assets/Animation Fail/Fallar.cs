@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,13 +5,13 @@ public class Fallar : MonoBehaviour
 {
 
     public GameObject failed;
-    private AudioManager audioManager;
+    private AudioManager2 audioManager;
 
     public string scene;
 
     void Start()
     {
-        audioManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager>();
+        audioManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager2>();
     }
 
     public void fail()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -71,6 +69,14 @@ public class Continue : MonoBehaviour
                 return "_Capitulo_1/1.9-Dialogo/Escena_1";
             case 18:
                 return "_Capitulo_1/1.9-Dialogo/Escena_2";
+            case 19:
+                return "_Capitulo_2/2.2-Puzzle5/Puzzle5";
+            case 20:
+                return "_Capitulo_2/2.4-Puzzle6/Puzzle6";
+            case 21:
+                return "_Capitulo_2/2.8-Puzzle7/Puzzle7";
+            case 22:
+                return "_Capitulo_2/2.13-Puzzle8/Puzzle8";
             default:
                 return "_Capitulo_1/1.1-Dialogo/Escena";
         }

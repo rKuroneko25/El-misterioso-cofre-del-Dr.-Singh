@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,10 +12,30 @@ public class pureba : MonoBehaviour
     static bool boton1;
     static bool boton2;
 
+    private AudioManager musicManager;
+    private string musicaActiva;
+
+    public GameObject Oscuro;
+    public GameObject OscuroEnd;
+
     void Start()
     {
+        Oscuro.SetActive(true);
+        Oscuro.GetComponent<Animator>().SetTrigger("In");
+        Invoke("apagarOscuro", 1.5f);
+
         boton1 = true;
         boton2 = false;
+
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        musicaActiva = musicManager.GetCurrentPlayingSong();
+        musicManager.Stop(musicaActiva);
+        musicManager.Play("Puzle");
+    }
+
+    void apagarOscuro()
+    {
+        Oscuro.SetActive(false);
     }
 
     public void clickcaja()
@@ -105,7 +121,15 @@ public class pureba : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("_Capitulo_1/1.2-Puzzle1/Info");
+            Oscuro.SetActive(true);
+            Oscuro.GetComponent<Animator>().SetTrigger("Out");
+            Invoke("Esperar4Segundos", 1.5f);
         }
+    }
+
+    void Esperar4Segundos()
+    {
+        OscuroEnd.SetActive(true);
+        SceneManager.LoadScene("_Capitulo_1/1.2-Puzzle1/Info");
     }
 }

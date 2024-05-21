@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class LUZ : MonoBehaviour
 {
@@ -16,16 +14,27 @@ public class LUZ : MonoBehaviour
     public AudioManager audioManager2;
     public AudioManager audioManager3;
 
+
     void Start()
     {
         StartCoroutine(ActivarLuz());
 
         audioManager1.Play("MenuMusic");
 
+        if (!PlayerPrefs.HasKey("FirstTime"))
+        {
+            PlayerPrefs.SetFloat("VolumenMusica", 0.5f);
+            PlayerPrefs.SetFloat("VolumenSFX", 0.5f);
+            PlayerPrefs.SetFloat("VolumenVoces", 0.5f);
+
+            PlayerPrefs.SetInt("FirstTime", 1);
+
+            PlayerPrefs.Save();
+        }
+
         audioManager1.Volume(PlayerPrefs.GetFloat("VolumenMusica"));
         audioManager2.Volume(PlayerPrefs.GetFloat("VolumenSFX"));
         audioManager3.Volume(PlayerPrefs.GetFloat("VolumenVoces"));
-
     }
 
     IEnumerator ActivarLuz()

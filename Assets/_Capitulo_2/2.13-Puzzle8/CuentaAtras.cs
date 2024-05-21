@@ -1,13 +1,15 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class CuentaAtras : MonoBehaviour
 {
     public float totalTime = 60f;
     private float currentTime;
 
+    public Fallar failScript;
+
     public TextMeshProUGUI countdownText;
+    bool coso = true;
 
     void Start()
     {
@@ -31,12 +33,12 @@ public class CuentaAtras : MonoBehaviour
 
         countdownText.text = formattedTime;
 
-        if (currentTime <= 0)
+        if (currentTime <= 0 && coso)
         {
+            coso = false;
             Debug.Log("Tiempo agotado");
-            Time.timeScale = 0f;
 
-            SceneManager.LoadScene("SiguienteEscena");
+            failScript.fail();
         }
     }
 }

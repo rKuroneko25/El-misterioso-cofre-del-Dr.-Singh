@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,16 +10,33 @@ public class BotonesCiudades : MonoBehaviour
 
     public GameObject Amelia;
 
+    private AudioManager musicManager;
+    private string musicaActiva;
+
+    public GameObject Oscuro;
+    public GameObject OscuroEnd;
+
     // Start is called before the first frame update
     void Start()
     {
+        BotonSeleccionado = null;
 
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        musicaActiva = musicManager.GetCurrentPlayingSong();
+        musicManager.Stop(musicaActiva);
+        musicManager.Play("Puzle");
+
+        if (Oscuro != null)
+        {
+            Oscuro.SetActive(true);
+            Oscuro.GetComponent<Animator>().SetTrigger("In");
+            Invoke("apagarOscuro", 1.5f);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void apagarOscuro()
     {
-
+        Oscuro.SetActive(false);
     }
 
     void SeleccionaBoton(GameObject boton)
@@ -86,12 +100,15 @@ public class BotonesCiudades : MonoBehaviour
             Amelia.GetComponent<AudioSource>().clip = Resources.Load("Voces/8_Puzle3/Puzle3_Amelia5") as AudioClip;
             Amelia.GetComponent<AudioSource>().Play();
 
-            Invoke("CargarEscena", 4.0f);
+            Oscuro.SetActive(true);
+            Oscuro.GetComponent<Animator>().SetTrigger("Out");
+            Invoke("CargarEscena", 2.0f);
         }
     }
 
     public void CargarEscena()
     {
+        OscuroEnd.SetActive(true);
         SceneManager.LoadScene("_Capitulo_1/1.7-Dialogo/Escena");
     }
 

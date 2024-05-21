@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -11,6 +9,17 @@ public class Draggable : MonoBehaviour
     private bool isDragging = false;
     private Vector3 mouseDragStartPosition;
     private Vector3 objectDragStartPosition;
+
+    private AudioManager musicManager;
+    private string musicaActiva;
+
+    void Start()
+    {
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        musicaActiva = musicManager.GetCurrentPlayingSong();
+        musicManager.Stop(musicaActiva);
+        musicManager.Play("Puzle");
+    }
 
     private void OnMouseDown()
     {

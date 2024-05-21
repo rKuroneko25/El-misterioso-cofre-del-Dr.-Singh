@@ -15,7 +15,7 @@ public class TemporalText : MonoBehaviour
     {
         textMesh.enabled = true; // Muestra el texto.
 
-        yield return new WaitForSeconds(4); // Espera 6 segundos.
+        yield return new WaitForSeconds(3); // Espera 6 segundos.
 
         textMesh.enabled = false; // Oculta el texto.
     }

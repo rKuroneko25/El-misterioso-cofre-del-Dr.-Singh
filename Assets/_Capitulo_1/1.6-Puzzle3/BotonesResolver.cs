@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,22 +23,21 @@ public class BotonesResolver : MonoBehaviour
     public Button[] botonesCiudades;
     public GameObject[] parrafosContrato;
     public GameObject ContratoEspanol;
-    private static Dictionary<string, string> parrafos = new Dictionary<string, string>{
+    private static Dictionary<string, string> parrafos;
+
+    void Start()
+    {
+        BotonAnterior = null;
+
+        parrafosOcultos = PlayerPrefs.GetInt("parrafos");
+
+        parrafos = new Dictionary<string, string>{
         {"Morgege", "1"},
         {"Vorbehalt", "2"},
         {"Kaufer", "3"},
         {"Kundigung", "4"},
     };
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-
     }
-
-
 
     void activaBoton(string nombre, GameObject boton, bool Manual_Contrato)
     {
@@ -75,6 +72,7 @@ public class BotonesResolver : MonoBehaviour
 
 
                 parrafosOcultos--;
+                PlayerPrefs.SetInt("parrafos", parrafosOcultos);
                 if (parrafosOcultos == 0)
                 {
                     Debug.Log("Puzzle Resuelto");
@@ -114,15 +112,12 @@ public class BotonesResolver : MonoBehaviour
         Dialogo.SetActive(false);
     }
 
-
     /////////////////////////Botones Manual//////////////////////////////////////////
 
     public void KaufurkundeM()
     {
         Debug.Log("Kaufurkunde Manual");
         activaBoton("Kaufurkunde", gameObject, true);
-        //imprime la lista de botones
-
     }
 
     public void MorgegeM()
@@ -166,6 +161,7 @@ public class BotonesResolver : MonoBehaviour
         Debug.Log("Verkaufer Manual");
         activaBoton("Verkaufer", gameObject, true);
     }
+
     /////////////////////////Botones Contrato//////////////////////////////////////////
 
     public void MorgegeC()
@@ -190,11 +186,5 @@ public class BotonesResolver : MonoBehaviour
     {
         Debug.Log("Kaufer Contrato");
         activaBoton("Kaufer", gameObject, false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

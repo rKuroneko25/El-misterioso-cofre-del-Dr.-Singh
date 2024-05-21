@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Introduccion/Intro.unity
+    guid: 2e26b40a97ca62b429b0bc5637982b79
+  - enabled: 1
     path: Assets/_Introduccion/Main Menu.unity
     guid: c688303c531b5d04f8d2f6652447e098
   - enabled: 1
@@ -74,4 +77,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Capitulo_1/1.9-Dialogo/Escena_2.unity
     guid: fb429b5d6bbf57d4ba34dd45bd86e9d2
+  - enabled: 1
+    path: Assets/_Capitulo_1/1.9-Dialogo/Intersection.unity
+    guid: 7e51c7d018c771c41a2342abf6f909a4
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.8-Puzzle7/Info.unity
+    guid: c264ac55d064c6f4bbaa57d78a0d7b04
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.2-Puzzle5/Info.unity
+    guid: 898c3f3b61f74a34a8e73d8297ea0e98
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.13-Puzzle8/Info.unity
+    guid: 47b5a5e5dbedcb34db31474bc7480ad3
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.4-Puzzle6/Info.unity
+    guid: 4459b8bd1c58ecd46b065f76ba2e9cb8
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.4-Puzzle6/Puzzle6.unity
+    guid: 63c5101ec12b54446afe6460b2145f29
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.2-Puzzle5/Puzzle5.unity
+    guid: 1dfbe32df58f96646bafbd6e69d2c1e7
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.8-Puzzle7/Puzzle7.unity
+    guid: 5798add73e8a72f42b7324fa82be5777
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.13-Puzzle8/Puzzle8.unity
+    guid: d3394392074027c4e9634576703905c8
+  - enabled: 1
+    path: Assets/_Capitulo_2/2.13-Puzzle8/FinDemo.unity
+    guid: 13a30e17f3d5ab14498a8e4bb35c6402
   m_configObjects: {}

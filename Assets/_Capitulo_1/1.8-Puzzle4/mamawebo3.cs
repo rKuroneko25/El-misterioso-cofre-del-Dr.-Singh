@@ -1,12 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class mamawebo3 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private AudioManager musicManager;
+    private string musicaActiva;
+
     void Start()
     {
+        musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
+        musicaActiva = musicManager.GetCurrentPlayingSong();
+        musicManager.Stop(musicaActiva);
+        musicManager.Play("Puzle");
+
         switch (PlayerPrefs.GetInt("SaveActual"))
         {
             case 1:

@@ -1,12 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using Unity.VisualScripting;
-using System;
 using UnityEngine.SceneManagement;
-using System.Diagnostics;
 
 public class Dialogue1_1 : MonoBehaviour
 {
@@ -69,15 +64,21 @@ public class Dialogue1_1 : MonoBehaviour
         sfxManager = GameObject.Find("AudioManager (SFX)").GetComponent<AudioManager2>();
         musicManager = GameObject.Find("AudioManager (Musica)").GetComponent<AudioManager>();
         musicaActiva = musicManager.GetCurrentPlayingSong();
-        if (musicaActiva != null) { //Hay música sonando
-            if (musicaActiva == dialogueLines[index].musica) { 
+        if (musicaActiva != null)
+        { //Hay música sonando
+            if (musicaActiva == dialogueLines[index].musica)
+            {
                 //Si la que toca ahora es la misma sigue sonando
                 // musicManager.Play(dialogueLines[index].musica);
-            } else {
+            }
+            else
+            {
                 //Si toca otra, la cambio
-                if (dialogueLines[index].musica != null && dialogueLines[index].musica != "") {
+                if (dialogueLines[index].musica != null && dialogueLines[index].musica != "")
+                {
                     musicManager.Stop(musicaActiva);
                     musicManager.Play(dialogueLines[index].musica);
+                    musicaActiva = musicManager.GetCurrentPlayingSong();
                 }
             }
         }
@@ -116,8 +117,9 @@ public class Dialogue1_1 : MonoBehaviour
         if (ElQueEstaHablando != null && ElQueEstaHablando.isPlaying)
             ElQueEstaHablando.volume = audioVolume;
 
-        if (!maninRelajate) {
-            if(Input.GetMouseButtonDown(0) && !pauseHover.isMouseOverButton && !paused)
+        if (!maninRelajate)
+        {
+            if (Input.GetMouseButtonDown(0) && !pauseHover.isMouseOverButton && !paused)
             {
                 if (textComponent.text == dialogueLines[index].dialogueText)
                 {
@@ -130,7 +132,9 @@ public class Dialogue1_1 : MonoBehaviour
                     StopCoroutine(RefTypeLine);
                     textComponent.text = dialogueLines[index].dialogueText;
                 }
-            } else if (Input.GetMouseButtonDown(0) && (pauseHover.isMouseOverButton || resumeHover.isMouseOverButton)) {
+            }
+            else if (Input.GetMouseButtonDown(0) && (pauseHover.isMouseOverButton || resumeHover.isMouseOverButton))
+            {
                 paused = !paused;
             }
         }
@@ -139,7 +143,9 @@ public class Dialogue1_1 : MonoBehaviour
         {
             if (ElQueEstaHablando != null && ElQueEstaHablando.isPlaying)
                 ElQueEstaHablando.Pause();
-        } else {
+        }
+        else
+        {
             if (ElQueEstaHablando != null && !ElQueEstaHablando.isPlaying)
                 ElQueEstaHablando.UnPause();
         }
@@ -156,7 +162,8 @@ public class Dialogue1_1 : MonoBehaviour
     {
         foreach (char c in dialogueLines[index].dialogueText.ToCharArray())
         {
-            while (paused) {
+            while (paused)
+            {
                 yield return null;
             }
             textComponent.text += c;
@@ -179,13 +186,16 @@ public class Dialogue1_1 : MonoBehaviour
 
     IEnumerator Dialogar()
     {
-        if (dialogueLines[index].musica != null && dialogueLines[index].musica != "") {
-            if (dialogueLines[index].musica != musicaActiva) {
+        if (dialogueLines[index].musica != null && dialogueLines[index].musica != "")
+        {
+            if (dialogueLines[index].musica != musicaActiva)
+            {
                 musicManager.Stop(musicaActiva);
                 musicaActiva = dialogueLines[index].musica;
                 musicManager.Play(musicaActiva);
             }
-            if (dialogueLines[index].musica == "Silencio") {
+            if (dialogueLines[index].musica == "Silencio")
+            {
                 musicManager.Stop(musicaActiva);
             }
         }
@@ -303,13 +313,22 @@ public class Dialogue1_1 : MonoBehaviour
                     ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
                     ElQueEstaHablando.Play();
                 }
-            } else { // cualquier letra, el de la derecha emite el sonido
-                dialogueLines[index].RCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
-                dialogueLines[index].LCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
-                ElQueEstaHablando = dialogueLines[index].RCharacterImage.GetComponent<AudioSource>();
-                if (ElQueEstaHablando != null) {
-                    ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
-                    ElQueEstaHablando.Play();
+            }
+            else
+            { // cualquier letra, el de la derecha emite el sonido
+                if (dialogueLines[index].RCharacterImage != null)
+                {
+                    dialogueLines[index].LCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
+                }
+                if (dialogueLines[index].RCharacterImage != null)
+                {
+                    dialogueLines[index].RCharacterImage.transform.GetChild(0).gameObject.SetActive(false);
+                    ElQueEstaHablando = dialogueLines[index].RCharacterImage.GetComponent<AudioSource>();
+                    if (ElQueEstaHablando != null)
+                    {
+                        ElQueEstaHablando.clip = dialogueLines[index].speakerAudio;
+                        ElQueEstaHablando.Play();
+                    }
                 }
             }
         }

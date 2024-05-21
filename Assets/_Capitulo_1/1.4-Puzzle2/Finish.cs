@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,9 +9,17 @@ public class Finish : MonoBehaviour
 
     public Fallar failScript;
 
+    public GameObject Oscuro;
+    public GameObject OscuroEnd;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        Oscuro.SetActive(true);
+        Oscuro.GetComponent<Animator>().SetTrigger("In");
+        Invoke("apagarOscuro", 1.5f);
+
         correctPositions.Add(new Vector3(-5.04223442f, 2.66089821f, 8.072f));
         correctPositions.Add(new Vector3(-4.04223394f, 2.66089821f, 8.072f));
         correctPositions.Add(new Vector3(-3.04223442f, 2.66089821f, 8.072f));
@@ -28,10 +35,9 @@ public class Finish : MonoBehaviour
         correctPositions.Add(new Vector3(-3.04223442f, -0.315101832f, 8.10283375f));
     }
 
-    // Update is called once per frame
-    void Update()
+    void apagarOscuro()
     {
-
+        Oscuro.SetActive(false);
     }
 
     public void Comprobar()
@@ -51,12 +57,20 @@ public class Finish : MonoBehaviour
         // Si todos los cuadrados están en la posición correcta, llamamos a NextPhase
         if (allSquaresInCorrectPosition)
         {
-            SceneManager.LoadScene("_Capitulo_1/1.5-Dialogo/Escena");
+            Oscuro.SetActive(true);
+            Oscuro.GetComponent<Animator>().SetTrigger("Out");
+            Invoke("Esperar4Segundos", 1.5f);
         }
         else
         {
             failScript.fail();
         }
+    }
+
+    void Esperar4Segundos()
+    {
+        OscuroEnd.SetActive(true);
+        SceneManager.LoadScene("_Capitulo_1/1.5-Dialogo/Escena");
     }
 
 }

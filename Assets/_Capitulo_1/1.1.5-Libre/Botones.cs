@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 
@@ -56,7 +54,7 @@ public class Botones : MonoBehaviour
     public void Zona1_Derecha()
     {
         audioManager.Play("ZoneTransition");
-        StartCoroutine(Transicion(1,2));
+        StartCoroutine(Transicion(1, 2));
     }
 
     public void Zona1_Abajo()
@@ -96,7 +94,7 @@ public class Botones : MonoBehaviour
         Bloqueo.SetActive(true);
         CajaTexto.SetActive(true);
         CajitaTexto.nombre = "Amelia";
-        CajitaTexto.textLines[0] = "Es la bandera de Inglaterra.";
+        CajitaTexto.textLines[0] = "Es la bandera de Inglaterra, mi patria.";
         CajitaTexto.nLines = 1;
     }
 
@@ -134,13 +132,13 @@ public class Botones : MonoBehaviour
     public void Zona2_Izquierda()
     {
         audioManager.Play("ZoneTransition");
-        StartCoroutine(Transicion(2,1));
+        StartCoroutine(Transicion(2, 1));
     }
 
     public void Zona2_Arriba()
     {
         audioManager.Play("ZoneTransition");
-        StartCoroutine(Transicion(2,3));
+        StartCoroutine(Transicion(2, 3));
     }
 
     public void Zona2_Coche()
@@ -168,7 +166,7 @@ public class Botones : MonoBehaviour
     public void Zona3_Izquierda()
     {
         audioManager.Play("ZoneTransition");
-        StartCoroutine(Transicion(3,2));
+        StartCoroutine(Transicion(3, 2));
     }
 
     public void Zona3_Arbol()
@@ -195,7 +193,8 @@ public class Botones : MonoBehaviour
 
     public void Zona3_Cabin()
     {
-        if (done){
+        if (done)
+        {
             Bloqueo.SetActive(true);
             CajaTexto.SetActive(true);
             CajitaTexto.nombre = "Amelia";
@@ -203,7 +202,9 @@ public class Botones : MonoBehaviour
             CajitaTexto.textLines[1] = "Tengo que volver con el Doctor.";
             CajitaTexto.nLines = 2;
 
-        } else {
+        }
+        else
+        {
             done = true;
             Bloqueo.SetActive(true);
             CajaTexto.SetActive(true);
@@ -250,7 +251,7 @@ public class Botones : MonoBehaviour
                 break;
             case 3:
                 Zona3.SetActive(false);
-                break;   
+                break;
         }
         switch (y)
         {
@@ -283,7 +284,8 @@ public class Botones : MonoBehaviour
         }
     }
 
-    IEnumerator Startt(){
+    IEnumerator Startt()
+    {
         Oscurito.SetActive(true);
         Oscurito.GetComponent<Animator>().SetTrigger("In");
         yield return new WaitForSeconds(1.5f);
@@ -297,7 +299,8 @@ public class Botones : MonoBehaviour
         Oscurito.SetActive(false);
     }
 
-    IEnumerator Finalizar(){
+    IEnumerator Finalizar()
+    {
         Oscurito.SetActive(true);
         Oscurito.GetComponent<Animator>().SetTrigger("Out");
         yield return new WaitForSeconds(1.5f);
